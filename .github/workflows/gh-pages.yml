@@ -1,0 +1,30 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2.4.6
+      with:
+        hugo-version: '0.66.0'
+        extended: true
+    
+    - name: Setup npm modules
+      run: npm install autoprefixer postcss-cli
+
+    - name: Build
+      run: hugo --gc --minify --cleanDestinationDir
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3.6.1
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./public
