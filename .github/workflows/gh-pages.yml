@@ -12,9 +12,9 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.4.6
+      uses: peaceiris/actions-hugo@v2.4.11
       with:
-        hugo-version: '0.73.0'
+        hugo-version: '0.72.0'
         extended: true
     
     - name: Setup npm modules
