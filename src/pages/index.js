@@ -13,7 +13,7 @@ import GetStarted from "../components/common/footer/getstarted"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Navigation />
+    <Navigation isIndex={true} />
     <Header />
     <Features />
     <Pricing />
