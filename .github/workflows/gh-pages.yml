@@ -6,26 +6,13 @@ on:
     - master
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.4.11
-      with:
-        hugo-version: '0.72.0'
-        extended: true
-    
-    - name: Setup npm modules
-      run: npm install autoprefixer postcss-cli
-
-    - name: Build
-      run: hugo --gc --minify --cleanDestinationDir
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.6.1
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./public
-        cname: loophole.cloud
+      - uses: actions/checkout@v1
+      - uses: xmflsct/action-publish-gatsby@v1
+        with:
+          publishBranch: 'master'
+          token: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
+          name: 'Łukasz Sowa'
+          email: 'lukasz@main.dev'
