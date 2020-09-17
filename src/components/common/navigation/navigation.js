@@ -57,7 +57,7 @@ export default class Navigation extends Component {
   }
 
   getNavAnchorLink = item => {
-    if (window.location.pathname === '/')
+    if (typeof window !== `undefined` && window.location.pathname === '/')
       return (
         <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
           {item}
