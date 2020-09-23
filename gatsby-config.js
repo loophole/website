@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `loophole`,
-    description: `Create secure tunnel to anything in your local network so people can see it`,
-    author: `main.dev`,
+    title: `Instant hosting, right from your local machine.`,
+    description: `Loophole lets developers securely expose their TCP-based services to the internet. No more hassle with port-forwarding, bypassing firewalls, or setting up dynamic DNS. Do what you are best at, CODING.We are developer-friendly!`,
+    //author: `main.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
