@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Instant hosting, right from your local machine.`,
-    description: `Loophole lets developers securely expose their TCP-based services to the internet. No more hassle with port-forwarding, bypassing firewalls, or setting up dynamic DNS. Do what you are best at, CODING.We are developer-friendly!`,
+    title: `Loophole`,
+    description: `Instant hosting, right from your local machine.`,
     author: `main.dev`,
   },
   plugins: [
