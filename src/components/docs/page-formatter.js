@@ -11,11 +11,51 @@ import Footer from "../common/footer/footer"
 
 import Header from "./header"
 
+const handleMenuClick = (e) => {
+    e.preventDefault();
+    console.log(e.target.parentElement);
+    e.target.parentElement.lastElementChild.style.display === "none" ?
+        e.target.parentElement.lastElementChild.style.display = "" :
+        e.target.parentElement.lastElementChild.style.display = "none";
+}
+
 const DocsPage = ({
     data, // this prop will be injected by the GraphQL query below.
 }) => {
-    const Docs = data.allMarkdownRemark.edges
-        .map(edge => <DocsMenuItem key={edge.node.id}><Link to={`/docs/${edge.node.frontmatter.slug}`}>{edge.node.frontmatter.title}</Link></DocsMenuItem>)
+    const groupedEdges = data.allMarkdownRemark.edges
+        .reduce((acc, edge) => {
+            const parent = edge.node.frontmatter.slug.includes('/') ? edge.node.frontmatter.slug.split('/')[0] : '_global'
+            acc[parent] = acc[parent] ? [...acc[parent], edge] : [edge]
+            return acc;
+        }, {});
+    const Docs = [];
+    for (const [key, value] of Object.entries(groupedEdges)) {
+        if (key === "_global") {
+            for (const item of value) {
+                Docs.push((
+                    <DocsMenuItem key={item.node.id}>
+                        <Link to={`/docs/${item.node.frontmatter.slug}`}>{item.node.frontmatter.title}</Link>
+                    </DocsMenuItem>
+                ))
+            }
+        } else {
+            const group = [];
+            for (const item of value) {
+                group.push((
+                    <DocsMenuItem key={item.node.id}>
+                        <Link to={`/docs/${item.node.frontmatter.slug}`}>{item.node.frontmatter.title}</Link>
+                    </DocsMenuItem>
+                ))
+            }
+            Docs.push(
+                <DocsMenuItem key={`${key}-group`}>
+                    <span onClick={(e) => handleMenuClick(e)}>{key}</span>
+                    <DocsMenuSlider key={`${key}-items`}>
+                        {group}
+                    </DocsMenuSlider>
+                </DocsMenuItem>)
+        }
+    }
     return (
         <Layout>
             <SEO title="Documentation" />
@@ -71,13 +111,29 @@ const DocsContainer = styled(Container)`
 `
 
 const DocsMenu = styled.div`
-    flex: 0 0 230px;
+    flex: 0 1 230px;
 `
 const DocsMenuGroup = styled.ul`
   list-style: none;
 `
 
+const DocsMenuSlider = styled.ul`
+flex: 0 0 180px;
+
+animation: slide-down .3s ease-out;
+
+@keyframes slide-down {
+    0% { opacity: 0; -moz-transform: translateY(-100%); }   
+  100% { opacity: 1; -moz-transform: translateY(0); }
+}
+`
+
 const DocsMenuItem = styled.li`
+text-transform: capitalize;
+span {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
 
@@ -90,7 +146,7 @@ a {
 `
 
 const DocsContent = styled.div`
-    flex: 1 0 230px;
+    flex: 1 1 230px;
 `
 
 const DocsContentTitle = styled.h1`
