@@ -31,14 +31,26 @@ const Header = () => {
         <Flex>
           <HeaderTextGroup>
             <Subtitle>
-              {data.site.siteMetadata.author}'s</Subtitle>
+              NOW IN BETA
+            </Subtitle>
             <h1>
-              {data.site.siteMetadata.title}
+              Instant hosting, right from your local machine.
             </h1>
             <h2>
-              {data.site.siteMetadata.description}
+              Loophole lets developers securely expose their TCP-based services to the internet. 
+              No more hassle with port-forwarding, bypassing firewalls, or setting up dynamic DNS.<br /> <br />
+              Do what you are best at, CODING. We take care of the rest!
             </h2>
+            <HeaderButtons>
+              <HeaderButton>
+                Quickstart for Free
+              </HeaderButton>
+              <HeaderButton>
+                Documentation
+              </HeaderButton>
+            </HeaderButtons>
           </HeaderTextGroup>
+          
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
             <br />
@@ -60,10 +72,10 @@ const HeaderWrapper = styled.header`
   }
 `
 const Subtitle = styled.h5`
-  font-size: 16px;
+  font-size: 18px;
   color: ${props => props.theme.color.accent};
   letter-spacing: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 1px;
 `
 
 const HeaderTextGroup = styled.div`
@@ -79,11 +91,13 @@ const HeaderTextGroup = styled.div`
   }
 
   h1 {
+    font-size: 3 rem;
     margin: 0 0 24px;
     color: ${props => props.theme.color.primary};
   }
 
   h2 {
+    font-size: 5 rem;
     margin-bottom: 24px;
     ${props => props.theme.font_size.regular}
   }
@@ -104,6 +118,16 @@ const Flex = styled.div`
   }
 `
 
+const HeaderButtons = styled.div`
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    grid-gap: 64px;
+  }
+` 
 const HeaderForm = styled.form`
   display: flex;
   flex-direction: row;
@@ -154,7 +178,7 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  font-weight: 500;
+  font-weight: 100;
   font-size: 14px;
   color: white;
   letter-spacing: 1px;
@@ -165,6 +189,7 @@ const HeaderButton = styled.button`
   cursor: pointer;
   white-space: nowrap;
   background: ${props => props.theme.color.secondary};
+
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;

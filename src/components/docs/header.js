@@ -31,7 +31,7 @@ const Header = () => {
         <Flex>
           <HeaderTextGroup>
             <Subtitle>
-              {data.site.siteMetadata.author}'s</Subtitle>
+              {data.site.siteMetadata.author}</Subtitle>
             <h1>
               {data.site.siteMetadata.title}
             </h1>

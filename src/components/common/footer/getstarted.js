@@ -22,12 +22,13 @@ const GetStarted = () => {
         <GetStartedContainer>
           <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
           <TryItButton onClick={loginWithRedirect}>Get early access</TryItButton>
-          <Subtitle>No credit card required.</Subtitle>
+          <Subtitle> Or Explore Docs (link to docs) to see everything Loophole can do!</Subtitle>
         </GetStartedContainer>
       ) : (
         <GetStartedContainer>
           <GetStartedTitle>Get the latest release</GetStartedTitle>
           <TryItButton onClick={handleSubmit}>Download</TryItButton>
+          <Subtitle> Or Explore Docs (link to docs) to see everything Loophole can do! </Subtitle>
         </GetStartedContainer>
       )
     }

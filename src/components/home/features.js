@@ -10,23 +10,50 @@ const Features = () => (
       <SectionTitle>Get to know it better</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Secure</FeatureTitle>
+          <FeatureTitle>
+            Easy HTTPS
+          </FeatureTitle>
+            <FeatureText>
+              Instantly create a public HTTPS url for a website running locally on your development machine. 
+              Loophole offloads TLS so you don't have to worry about your configuration.
+            </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Completely Secure</FeatureTitle>
           <FeatureText>
-            End-to-end TLS encryption
+            We take security and customer data very seriously. 
+            By default, we offer end-to-end SSL encryption for all of our 
+            services - your data is secure all the way to your local services. 
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Simple</FeatureTitle>
+          <FeatureTitle>Encrypted, untouched Data</FeatureTitle>
           <FeatureText>
-          Get started in seconds
+          Automatic TLS is built into our client using Let's Encrypt. 
+          All our services utilize HTTPS for securing all traffic. 
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Lorem</FeatureTitle>
+          <FeatureTitle>Multiple Simultaneous tunnels</FeatureTitle>
           <FeatureText>
-            ipsum ipsum ipsum
+          Run multiple tunnels simultaneously with a single loophole client.
           </FeatureText>
         </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Authenticated tunnels</FeatureTitle>
+          <FeatureText>
+          Protect your Tunnel by limiting access to authenticated users. 
+          We offer Basic Auth or Bearer Token authentication strategies.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>No Setups required</FeatureTitle>
+          <FeatureText>
+          Get over the complex network setups and stop worrying about VPNs. 
+          With Loophole, you are protected from exposing your network and the hassle of firewall setups or reverse proxies. 
+          </FeatureText>
+        </FeatureItem>
+
       </FeaturesGrid>
     </StyledContainer>
   </Section>
