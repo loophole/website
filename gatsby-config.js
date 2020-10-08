@@ -58,13 +58,11 @@ module.exports = {
     {
       resolve: "gatsby-theme-auth0",
       options: {
-        domain: "owlsome.eu.auth0.com",
-        clientID: "H24uj9EdQd5ud65qQYqAKFc3wVkB3qiH",
+        domain: "loophole.eu.auth0.com",
+        clientID: "Hjl7waAKPGpTrqvyn4JogPQkDS1X0n1N",
         redirectUri: "https://loophole.cloud",
-        audience: "https://api.loophole.cloud", // Optional
-        // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
-        // scope: process.env.AUTH0_SCOPE, // Optional
-        callbackPath: "/auth/callback", // Optional
+        audience: "https://api.loophole.cloud",
+        callbackPath: "/auth/callback",
       },
     },
     `gatsby-plugin-client-side-redirect` // keep it in last in list
