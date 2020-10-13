@@ -24,7 +24,7 @@ export default class Navigation extends Component {
   state = {
     mobileMenuOpen: false,
     hasScrolled: false,
-    isLoggedIn: false,
+    isAuthenticated: false,
     profile: null
   }
 
@@ -56,15 +56,16 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => {
+  getNavAnchorLink = (item, id) => {
+    if (!id) id = item;
     if (this.props.isIndex)
       return (
-        <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+        <AnchorLink href={`#${id.toLowerCase()}`} onClick={this.closeMobileMenu}>
           {item}
         </AnchorLink>
       )
     return (
-      <Link to={`/#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+      <Link to={`/#${id.toLowerCase()}`} onClick={this.closeMobileMenu}>
         {item}
       </Link>
     )
@@ -103,7 +104,7 @@ export default class Navigation extends Component {
         <StyledContainer>
           <Brand>
             <Scrollspy offset={-64} item={["loophole"]} currentClassName="active">
-              {this.getNavAnchorLink("loophole")}
+              {this.getNavAnchorLink("loophole", "logo")}
             </Scrollspy>
           </Brand>
           <Mobile>

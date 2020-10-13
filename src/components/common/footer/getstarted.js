@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 import { Container, Section } from "../../global"
-import { AuthService, useAuth } from "gatsby-theme-auth0";
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 
 
 const GetStarted = () => {
-  const { isLoggedIn } = useAuth();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -17,11 +17,11 @@ const GetStarted = () => {
 
   return (
   <StyledSection>
-    { !isLoggedIn ?
+    { !isAuthenticated ?
       (
         <GetStartedContainer>
           <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-          <TryItButton onClick={AuthService.login}>Get early access</TryItButton>
+          <TryItButton onClick={loginWithRedirect}>Get early access</TryItButton>
           <Subtitle>No credit card required.</Subtitle>
         </GetStartedContainer>
       ) : (

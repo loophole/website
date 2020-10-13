@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Loophole`,
     description: `Instant hosting, right from your local machine.`,
-    author: `main.dev`,
+    author: `Main Development GmbH`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -50,19 +50,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/product/icon.png`,
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    {
-      resolve: "gatsby-theme-auth0",
-      options: {
-        domain: "loophole.eu.auth0.com",
-        clientID: "Hjl7waAKPGpTrqvyn4JogPQkDS1X0n1N",
-        redirectUri: "https://loophole.cloud",
-        audience: "https://api.loophole.cloud",
-        callbackPath: "/auth/callback",
       },
     },
     `gatsby-plugin-client-side-redirect` // keep it in last in list

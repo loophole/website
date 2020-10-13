@@ -89,17 +89,6 @@ export const ActionsContainer = styled.div`
   @media (max-width: ${props => props.theme.screen.xs}) {
     display: none;
   }
-
-  button {
-    font-family: ${props => props.theme.font.normal};
-    ${props => props.theme.font_size.xsmall};
-    color: white;
-    background: #098b8c;
-    border-radius: 4px;
-    padding: 10px 16px;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
 `
 
 export const Mobile = styled.div`
