@@ -42,7 +42,7 @@ const ProfileContainer = styled(Container)`
 
 const PersonalInformation = styled.div`
   border: 1px solid ${props => props.theme.color.secondary};
-  flex: 0 0 240px;
+  flex: 0 1 240px;
 `
 
 const PersonalInformationTitle = styled.div`
@@ -72,6 +72,6 @@ padding-left: 5px;
 
 const UsageDetails = styled.div`
   margin-left: 30px;
-  flex: 1 0 560px;
+  flex: 1 2 560px;
   padding: 3px;
 `

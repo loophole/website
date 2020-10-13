@@ -128,7 +128,9 @@ export default class Navigation extends Component {
         <Mobile>
           {mobileMenuOpen && (
             <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
+              <Container>
+                {this.getNavList({ mobile: true })}
+              </Container>
             </MobileMenu>
           )}
         </Mobile>

@@ -4,28 +4,28 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from 'gatsby';
 
 const AccountMenu = () => {
-    const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
-    return (
-        <div>
-            {user && <span>Logged in as {user.nickname} </span>}
-            {isAuthenticated ? (
-                <ButtonGroup>
-                    <ActionButtonLink to={"/profile"}>
-                        Profile
-                    </ActionButtonLink>
-                    <ActionButtonSecondary onClick={logout}>Logout</ActionButtonSecondary>
-                </ButtonGroup>
-            ) : (
-                    <ActionButtonSecondary onClick={loginWithRedirect}>Login</ActionButtonSecondary>
-                )}
-        </div>
-    )
+  const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
+  return (
+    <div>
+      {user && <span>Logged in as {user.nickname} </span>}
+      {isAuthenticated ? (
+        <ButtonGroup>
+          <ActionButtonLink to={"/profile"}>
+            Profile
+          </ActionButtonLink>
+          <ActionButtonSecondary onClick={logout}>Logout</ActionButtonSecondary>
+        </ButtonGroup>
+      ) : (
+          <ActionButtonSecondary onClick={loginWithRedirect}>Login</ActionButtonSecondary>
+        )}
+    </div>
+  )
 }
 
 export default AccountMenu
 
 const ButtonGroup = styled.div`
-    display: inline-block;
+  display: inline-block;
 `
 
 const ActionButton = styled.button`
@@ -47,9 +47,9 @@ font-size: 12px;
 `
 
 const ActionButtonLink = styled(Link)`
-    font-size: 12px;
-    margin: 0;
-    margin-left: 2px;
+  font-size: 12px;
+  margin: 0;
+  margin-left: 2px;
   display: inline-block;
   color: white;
   letter-spacing: 1px;
