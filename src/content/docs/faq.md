@@ -1,5 +1,5 @@
 ---
-slug: "FAQ"
+slug: "faq"
 title: "FAQ"
 ---
 

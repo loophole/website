@@ -1,35 +1,36 @@
 ---
-slug: "Commands/Help"
+slug: "commands/Help"
 title: "Instant help on CLI"
 ---
-
-<br/>
 
 With help command, you can get an instant brief description on the command and the flags that can be used along.
 
 
-<divs style="background-color:black;color:white;padding:10px;font-size: 105%;clear: left;display: table;justify-content: left align-items: left; flex-direction: column;">$ loophole [command] --help  </div>
+```bash
+$ loophole [command] --help
+```
 
+Example output:
 
-The result would be as following :
+```
+Loophole - End to end TLS encrypted TCP communication between you and your clients
 
-<divs style="background-color:black;color:white;padding:10px;font-size: 105%;clear: left;display: table;justify-content: left align-items: left; flex-direction: column;">
-
-$ loophole account --help </br> </br>
 Usage:
-  loophole account [flags]
-  loophole account [command]
+  loophole <port> [host] [flags]
+  loophole [command]
 
-Available Commands: <br/>
-  login   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Log in to use your account <br/>
-  logout  &nbsp;&nbsp;&nbsp;&nbsp;    Logout from your account
+Available Commands:
+  account     Parent for commands concerning your loophole account. Always use with one of the following: login, logout
+  completion  Generates bash completion scripts
+  help        Help about any command
 
 Flags:
-  -h, --help   help for account
+  -h, --help                   help for loophole
+      --hostname string        custom hostname you want to run service on
+  -i, --identity-file string   private key path (default "/home/lukasz/.ssh/id_rsa")
+      --qr                     use if you want a QR version of your url to be shown
+  -v, --verbose                verbose output
+      --version                version for loophole
 
-Global Flags:
-  -v, --verbose   verbose output
-
-
-
-</div>
+Use "loophole [command] --help" for more information about a command.
+```
