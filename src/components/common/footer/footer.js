@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+
 
 import { Container } from "../../global"
 
@@ -7,31 +9,26 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
-        <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
-        </ul>
-      </FooterColumn>
-      <FooterColumn>
-        <span>Resources</span>
-        <ul>
-          <li>Compare</li>
-          <li>Blog</li>
-        </ul>
-      </FooterColumn>
-      <FooterColumn>
         <span>Company</span>
         <ul>
-          <li>About Us</li>
-          <li>Careers</li>
+          <li><Link  to="/contact">Contact</Link></li>
+          <li><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
+          <li><Link to="/privacy-policy">Privacy Policy</Link></li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Social</span>
+        <span>Community</span>
         <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
+          <li><Link  to="https://github.com/loophole/cli/releases" target="_blank">Github</Link></li>
+          <li><Link  to="https://twitter.com/Loophole_cloud"target="_blank">Twitter</Link></li>
+          <li><Link  to="https://testandset.com/"target="_blank">TestAndSet</Link></li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn>
+        <span><Link to="/abuse"> Report Abuse </Link></span>
+        <ul>
+          <li>Made with Love in Germany! </li>
+          <li>© 2020 Main Development GmbH All rights reserved.  </li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
@@ -74,12 +71,12 @@ const BrandContainer = styled(Container)`
 `
 const FooterColumnContainer = styled(Container)`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 32px;
   justify-content: start;
   @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
+    grid-gap: 20px;
   }
 `
 const FooterColumn = styled.div`

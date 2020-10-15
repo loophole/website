@@ -4,23 +4,21 @@ import Layout from "../components/common/layout/layout"
 import SEO from "../components/common/layout/seo"
 import Navigation from "../components/common/navigation/navigation"
 
-import Header from "../components/home/header"
-import Features from "../components/home/features"
-import Pricing from "../components/home/pricing"
-import Usecases from "../components/home/usecases"
+import Header from "../components/termsandconditions/header"
+import Features from "../components/termsandconditions/features"
 import Footer from "../components/common/footer/footer"
 import GetStarted from "../components/common/footer/getstarted"
 
-const IndexPage = () => (
+
+const TnCPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Terms and Conditions" />
     <Navigation isIndex={true} />
     <Header />
-    <Usecases />
     <Features />
     <GetStarted />
     <Footer />
   </Layout>
 )
 
-export default IndexPage
+export default TnCPage

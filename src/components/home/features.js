@@ -10,23 +10,46 @@ const Features = () => (
       <SectionTitle>Get to know it better</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Secure</FeatureTitle>
+          <FeatureTitle>
+            Easy HTTPS
+          </FeatureTitle>
+            <FeatureText>
+              Instantly create a public HTTPS url for a website running locally on your development machine. 
+           </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Completely Secure</FeatureTitle>
           <FeatureText>
-            End-to-end TLS encryption
+            By default, we offer end-to-end SSL encryption for all of our 
+            services - your data is secure all the way to your local services. 
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Simple</FeatureTitle>
+          <FeatureTitle>Encrypted & Untouched</FeatureTitle>
           <FeatureText>
-          Get started in seconds
+          Automatic TLS is built into our client using Let's Encrypt. 
+          All our services utilize HTTPS for securing all traffic. 
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Lorem</FeatureTitle>
+          <FeatureTitle>Multiple tunnels</FeatureTitle>
           <FeatureText>
-            ipsum ipsum ipsum
+          Run multiple tunnels simultaneously with a single loophole client.
           </FeatureText>
         </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Authenticated tunnels</FeatureTitle>
+          <FeatureText>
+          We offer Basic Auth or Bearer Token authentication strategies to limit access for safety.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>No Setups required</FeatureTitle>
+          <FeatureText>
+         You are protected from exposing your network and the hassle of firewall setups or reverse proxies. 
+          </FeatureText>
+        </FeatureItem>
+
       </FeaturesGrid>
     </StyledContainer>
   </Section>
@@ -45,7 +68,7 @@ const SectionTitle = styled.h3`
 `
 
 const Subtitle = styled.h5`
-  font-size: 16px;
+  font-size: 18px;
   color: ${props => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
@@ -53,12 +76,12 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 670px;
+  max-width: 800px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0px auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 35px;
+  grid-column-gap: 150px;
+  grid-row-gap: 40px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
@@ -67,7 +90,7 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-direction: column;
 `
@@ -80,5 +103,5 @@ const FeatureTitle = styled.h4`
 `
 
 const FeatureText = styled.p`
-  text-align: center;
+  text-align: left;
 `

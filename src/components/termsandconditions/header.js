@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
+
 import { Container } from "../global"
-import { Bold } from "react-feather";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -16,42 +16,22 @@ const Header = () => {
           description
         }
       }
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
+      
     }
   `)
 
   return (
-    <HeaderWrapper id="logo">
+    <HeaderWrapper id="loophole">
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>
-              NOW IN BETA
-            </Subtitle>
+          <Subtitle>
+          loophole
+          </Subtitle> 
             <h1>
-              Instant hosting, right from your local machine.
+             Terms and Conditions
             </h1>
-            <h2>
-              No more hassle with port-forwarding, bypassing firewalls, or setting up dynamic DNS.
-              Do what you are best at, CODING. We take care of the rest!
-            </h2>
-            
-            <HeaderButton>
-                Quickstart for free
-            </HeaderButton>
-            
-            </HeaderTextGroup>
-          
-          <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
-            <br />
-          </ImageWrapper>
+          </HeaderTextGroup>
         </Flex>
       </Container>
     </HeaderWrapper>
@@ -62,7 +42,7 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background-color: #f8f8f8;
-  padding: 160px 120px 90px 120px;
+  padding: 160px 0 80px 0;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -119,8 +99,7 @@ const HeaderButtons = styled.div`
   display: grid;
   justify-content: space-between;
   align-content: center;
-  text-transform: uppercase;
-  grid-template-columns: 0fr 0fr;
+  grid-template-columns: 1fr 1fr;
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 64px;
@@ -176,47 +155,20 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  font-weight: 200;
-  font-size: 16px;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: block;
-  margin-left: 0px;
-  cursor: pointer;
-  white-space: nowrap;
-  background: ${props => props.theme.color.accent};
-
-  border-radius: 4px;
-  padding: 10px 20px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
-  &:hover {
-    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-left: 0;
-  }
-`
-
-const HeaderButton1 = styled.button`
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 100;
+  font-size: 14px;
   color: white;
   letter-spacing: 1px;
+  height: 60px;
   display: block;
   margin-left: 8px;
+  text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${props => props.theme.color.primary};
+  background: ${props => props.theme.color.secondary};
 
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 4px;
+  padding: 0px 40px;
   border-width: 0px;
   border-style: initial;
   border-color: initial;
@@ -232,16 +184,16 @@ const HeaderButton1 = styled.button`
   }
 `
 const ImageWrapper = styled.div`
-  justify-self: right;
-  align-self: right;
+  justify-self: end;
+  align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: right;
+    justify-self: center;
   }
 `
 
 const StyledImage = styled(Img)`
   width: 500px;
-    @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {

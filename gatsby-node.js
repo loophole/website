@@ -2,6 +2,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
   
     const docsTemplate = require.resolve(`./src/components/docs/page-formatter`)
+    const terms = require.resolve(`./src/components/docs/terms`)
   
     const result = await graphql(`
       {
@@ -30,6 +31,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       createPage({
         path: `/docs/${node.frontmatter.slug}`,
         component: docsTemplate,
+        context: {
+          // additional data can be passed via context
+          slug: node.frontmatter.slug,
+        },
+      })
+    });
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: `/docs/${node.frontmatter.slug}`,
+        component: terms,
         context: {
           // additional data can be passed via context
           slug: node.frontmatter.slug,
