@@ -112,9 +112,11 @@ const DocsContainer = styled(Container)`
 
 const DocsMenu = styled.div`
     flex: 0 1 230px;
+    margin-right: 2.5rem;
 `
 const DocsMenuGroup = styled.ul`
   list-style: none;
+  padding-left: 0px;
 `
 
 const DocsMenuSlider = styled.ul`
@@ -146,14 +148,15 @@ a {
 `
 
 const DocsContent = styled.div`
-    flex: 1 1 230px;
+    flex: 1 2 auto;
+    max-width: 1000px;
 `
 
 const DocsContentTitle = styled.h1`
   color: ${props => props.theme.color.primary};
   letter-spacing: 0px;
-  line-height: 30px;
-  margin-bottom: 10px;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
 `
 
 const DocsContentText = styled.p`
@@ -174,5 +177,17 @@ const DocsContentText = styled.p`
   }
   h6 {
     font-size: 1em;
+  }
+  pre {
+    background-color: ${props => props.theme.color.white.darker};
+    padding: 10px;
+    overflow: auto;
+    width: auto;
+  }
+  code {
+    background-color: ${props => props.theme.color.white.darker};
+    padding: 2px;
+    font-family: monospace;
+    color: ${props => props.theme.color.primary};
   }
 `

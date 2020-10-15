@@ -64,7 +64,7 @@ const Usecases = () => {
     <Section id="usecases">
       <StyledContainer>
         <Subtitle>Breaking the barrier between local and global</Subtitle>
-        <SectionTitle>Under 5 minutes, create public URLs for </SectionTitle>
+        <SectionTitle>Under 5 minutes, create public URLs for...</SectionTitle>
         <UsecasesGrid>
           <UsecasesItem>
           <UsecasesImage fluid={data.lesson.childImageSharp.fluid} />
@@ -88,7 +88,7 @@ const Usecases = () => {
           </UsecasesItem>
           <UsecasesItem>
               <UsecasesImage fluid={data.raspberry.childImageSharp.fluid} />
-            <UsecasesTitle>SSH access to Raspberry pi</UsecasesTitle>
+            <UsecasesTitle>SSH access to Raspberry Pi</UsecasesTitle>
           </UsecasesItem>
         </UsecasesGrid>
       </StyledContainer>
