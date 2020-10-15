@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import { Container, Section } from "../../global"
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
@@ -28,7 +29,7 @@ const GetStarted = () => {
         <GetStartedContainer>
           <GetStartedTitle>Get the latest release</GetStartedTitle>
           <TryItButton onClick={handleSubmit}>Download</TryItButton>
-          <Subtitle> Or Explore Docs (link to docs) to see everything Loophole can do! </Subtitle>
+          <Subtitle><b> Or Explore <Link to="/docs">docs</Link>  to see everything Loophole can do! </b> </Subtitle>
         </GetStartedContainer>
       )
     }
@@ -67,7 +68,7 @@ const TryItButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
+  background: ${props => props.theme.color.accent};
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;
@@ -88,6 +89,6 @@ const TryItButton = styled.button`
 const Subtitle = styled.span`
   ${props => props.theme.font_size.xxsmall}
   padding-top: 16px;
-  font-size: 14px;
+  font-size: 16px;
   color: ${props => props.theme.color.primary};
 `

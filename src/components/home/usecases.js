@@ -63,7 +63,7 @@ const Usecases = () => {
   
     <Section id="usecases">
       <StyledContainer>
-        <Subtitle>Breaking the barrier between local and Global</Subtitle>
+        <Subtitle>Breaking the barrier between local and global</Subtitle>
         <SectionTitle>Under 5 minutes, create public URLs for </SectionTitle>
         <UsecasesGrid>
           <UsecasesItem>

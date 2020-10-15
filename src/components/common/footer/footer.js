@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+
 
 import { Container } from "../../global"
 
@@ -7,10 +9,11 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
+        <span>Company</span>
         <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
+          <li>Contact</li>
+          <li><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
+          <li>Privacy Policy</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
