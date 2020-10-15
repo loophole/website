@@ -1,13 +1,12 @@
 ---
 slug: "commands/authentication"
 title: "Authentication"
+order: 1
 ---
 
-
-To access Loophole services described in further sections, you need to sign up for an account. Once you've signed up, you need to configure loophole with the authtoken. This will grant you access to account-only features. Loophole has a simple 'account' command to make this easy. Under the hood, the login command does is to add (or modify) the authtoken property in your loophole configuration file. 
+To access Loophole services described in further sections, you need to sign up for an account. Once you've signed up, you need to configure loophole with the authtoken. This will grant you access to account-only features. Loophole has a simple 'account' command to make this easy. Under the hood, the login command does is to add (or modify) the authtoken property in your loophole configuration file.
 
 **Under beta testing, all the features are available to every user at no cost.**
-
 
 #### account
 
@@ -22,6 +21,7 @@ After executing this command you'll be asked to open the URL in your browser, lo
 If everything is correct you'll be logged in. You can come back to CLI and start using `loophole`!.
 
 Usage:
+
 ```bash
 $ loophole account login
 ```
@@ -32,6 +32,7 @@ On the utilization of the services, you get an option to logout from the account
 This discards the access token and let's you log in again.
 
 Usage:
+
 ```
 $ loophole account logout
 ```

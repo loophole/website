@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -52,6 +52,6 @@ module.exports = {
         icon: `src/images/product/icon.png`,
       },
     },
-    `gatsby-plugin-client-side-redirect` // keep it in last in list
+    `gatsby-plugin-client-side-redirect`, // keep it in last in list
   ],
-}
+};

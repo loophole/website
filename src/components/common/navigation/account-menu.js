@@ -1,7 +1,7 @@
 import React from "react";
-import styled from 'styled-components';
-import { useAuth0 } from '@auth0/auth0-react';
-import { Link } from 'gatsby';
+import styled from "styled-components";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "gatsby";
 
 const AccountMenu = () => {
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
@@ -10,26 +10,26 @@ const AccountMenu = () => {
       {user && <span>Logged in as {user.nickname} </span>}
       {isAuthenticated ? (
         <ButtonGroup>
-          <ActionButtonLink to={"/profile"}>
-            Profile
-          </ActionButtonLink>
+          <ActionButtonLink to={"/profile"}>Profile</ActionButtonLink>
           <ActionButtonSecondary onClick={logout}>Logout</ActionButtonSecondary>
         </ButtonGroup>
       ) : (
-          <ActionButtonSecondary onClick={loginWithRedirect}>Login</ActionButtonSecondary>
-        )}
+        <ActionButtonSecondary onClick={loginWithRedirect}>
+          Login
+        </ActionButtonSecondary>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default AccountMenu
+export default AccountMenu;
 
 const ButtonGroup = styled.div`
   display: inline-block;
-`
+`;
 
 const ActionButton = styled.button`
-font-size: 12px;
+  font-size: 12px;
   display: inline-block;
   color: white;
   letter-spacing: 1px;
@@ -44,7 +44,7 @@ font-size: 12px;
   border-color: initial;
   border-image: initial;
   outline: 0px;
-`
+`;
 
 const ActionButtonLink = styled(Link)`
   font-size: 12px;
@@ -65,13 +65,9 @@ const ActionButtonLink = styled(Link)`
   border-image: initial;
   outline: 0px;
   text-decoration: none;
-  background: ${props => props.theme.color.primary};
-`
-
-const ActionButtonPrimary = styled(ActionButton)`
-    background: ${props => props.theme.color.primary};
-`
+  background: ${(props) => props.theme.color.primary};
+`;
 
 const ActionButtonSecondary = styled(ActionButton)`
-    background: ${props => props.theme.color.secondary};
-`
+  background: ${(props) => props.theme.color.secondary};
+`;

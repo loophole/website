@@ -1,10 +1,10 @@
 ---
-slug: "commands/Help"
+slug: "commands/help"
 title: "Instant help on CLI"
+order: 2
 ---
 
 With help command, you can get an instant brief description on the command and the flags that can be used along.
-
 
 ```bash
 $ loophole [command] --help
