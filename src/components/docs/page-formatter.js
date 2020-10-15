@@ -178,16 +178,4 @@ const DocsContentText = styled.p`
   h6 {
     font-size: 1em;
   }
-  pre {
-    background-color: ${props => props.theme.color.white.darker};
-    padding: 10px;
-    overflow: auto;
-    width: auto;
-  }
-  code {
-    background-color: ${props => props.theme.color.white.darker};
-    padding: 2px;
-    font-family: monospace;
-    color: ${props => props.theme.color.primary};
-  }
 `
