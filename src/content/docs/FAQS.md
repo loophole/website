@@ -12,7 +12,7 @@ Loophole is a service you can run on your local machine which allows you to secu
 
 ### What information is stored about my tunnels?
 
-Loophole does not log or store any data transmitted through your tunneled connections.  The tunnel is end to end encrypted from USer to the client end. Loophole does log some information about the connections which are used for debugging purposes and metrics like the name of the tunnel and the duration of connections.
+Loophole does not log or store any data transmitted through your tunneled connections.  The tunnel is end to end encrypted from user to the client end. Loophole does log some information about the connections which are used for debugging purposes and metrics like the name of the tunnel and the duration of connections.
 
 ### How much does Loophole Cost?
 
