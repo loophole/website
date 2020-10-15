@@ -8,7 +8,7 @@ const Features = () => (
   <Section id="Download">
     <StyledContainer>     
         <FeatureItem>
-          <FeatureTitle>Please download the latest version of Loophole for your Operating System and Architecture.</FeatureTitle>
+          <FeatureTitle><a href="https://github.com/loophole/cli/releases" target="blank" color="black"> Please download the latest version of Loophole for your Operating System and Architecture.</a></FeatureTitle>
           <FeatureText>
           <Boxx>
           On Linux or OSX you can unzip loophole from a terminal with the following command. On Windows, just double click loophole.zip. <br /> <br />
