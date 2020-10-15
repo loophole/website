@@ -27,7 +27,7 @@ const Footer = () => (
       <FooterColumn>
         <span><Link to="/abuse"> Report Abuse </Link></span>
         <ul>
-          <li>Made with Love in Germany! </li>
+          <li>Made with Love in Germany and Poland! </li>
           <li>© 2020 Main Development GmbH All rights reserved.  </li>
         </ul>
       </FooterColumn>
