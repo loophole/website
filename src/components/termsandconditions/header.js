@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import { AuthService, useAuth } from "gatsby-theme-auth0";
 
 import { Container } from "../global"
 
