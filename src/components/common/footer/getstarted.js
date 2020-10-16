@@ -19,7 +19,7 @@ const GetStarted = () => {
       {!isAuthenticated ? (
         <GetStartedContainer>
           <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-          <TryItButton onClick={loginWithRedirect}>
+          <TryItButton onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
             Get early access
           </TryItButton>
           <Subtitle>
@@ -31,7 +31,7 @@ const GetStarted = () => {
       ) : (
         <GetStartedContainer>
           <GetStartedTitle>Get the latest release</GetStartedTitle>
-          <TryItButton onClick={handleSubmit}>Download</TryItButton>
+          <TryItButton onClick={handleSubmit} onKeyDown={handleSubmit}>Download</TryItButton>
           <Subtitle>
             <b>
               {" "}

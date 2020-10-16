@@ -13,7 +13,6 @@ import Header from "./header";
 
 const handleMenuClick = (e) => {
   e.preventDefault();
-  console.log(e.target.parentElement);
   e.target.parentElement.lastElementChild.style.display === "none"
     ? (e.target.parentElement.lastElementChild.style.display = "")
     : (e.target.parentElement.lastElementChild.style.display = "none");
@@ -35,7 +34,7 @@ const DocsPage = ({
       for (const item of value) {
         Docs.push(
           <DocsMenuItem key={item.node.id}>
-            <Link to={`/docs/${item.node.frontmatter.slug}`}>
+            <Link role="button" to={`/docs/${item.node.frontmatter.slug}`}>
               {item.node.frontmatter.title}
             </Link>
           </DocsMenuItem>
@@ -46,7 +45,7 @@ const DocsPage = ({
       for (const item of value) {
         group.push(
           <DocsMenuItem key={item.node.id}>
-            <Link to={`/docs/${item.node.frontmatter.slug}`}>
+            <Link role="button" to={`/docs/${item.node.frontmatter.slug}`}>
               {item.node.frontmatter.title}
             </Link>
           </DocsMenuItem>
@@ -54,7 +53,7 @@ const DocsPage = ({
       }
       Docs.push(
         <DocsMenuItem key={`${key}-group`}>
-          <span onClick={(e) => handleMenuClick(e)}>{key}</span>
+          <DocsMenuCategory onClick={(e) => handleMenuClick(e)} onKeyDown={(e) => handleMenuClick(e)}>{key}</DocsMenuCategory>
           <DocsMenuSlider key={`${key}-items`}>{group}</DocsMenuSlider>
         </DocsMenuItem>
       );
@@ -116,7 +115,9 @@ const DocsContainer = styled(Container)`
 `;
 
 const DocsMenu = styled.div`
-  flex: 0 0 230px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 230px;
   margin-right: 2.5rem;
 `;
 const DocsMenuGroup = styled.ul`
@@ -139,6 +140,10 @@ const DocsMenuSlider = styled.ul`
   }
 `;
 
+const DocsMenuCategory = styled.button`
+  text-transform: capitalize;
+`;
+
 const DocsMenuItem = styled.li`
   text-transform: capitalize;
   span {
@@ -157,7 +162,10 @@ const DocsMenuItem = styled.li`
 `;
 
 const DocsContent = styled.div`
-  flex: 1 2 auto;
+  flex-grow: 2;
+  flex-shrink: 3;
+  flex-basis: 500px;
+  max-width: 900px;
 `;
 
 const DocsContentTitle = styled.h1`
@@ -187,3 +195,4 @@ const DocsContentText = styled.p`
     font-size: 1em;
   }
 `;
+

@@ -65,19 +65,20 @@ export default class Navigation extends Component {
         <AnchorLink
           href={`#${id.toLowerCase()}`}
           onClick={this.closeMobileMenu}
+          onKeyDown={this.closeMobileMenu}
         >
           {item}
         </AnchorLink>
       );
     return (
-      <Link to={`/#${id.toLowerCase()}`} onClick={this.closeMobileMenu}>
+      <Link to={`/#${id.toLowerCase()}`} onClick={this.closeMobileMenu} onKeyDown={this.closeMobileMenu}>
         {item}
       </Link>
     );
   };
 
   getPageAnchorLink = (item) => (
-    <Link to={`/${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <Link to={`/${item.toLowerCase()}`} onClick={this.closeMobileMenu} onKeyDown={this.closeMobileMenu}>
       {item}
     </Link>
   );
@@ -119,6 +120,7 @@ export default class Navigation extends Component {
           <Mobile>
             <button
               onClick={this.toggleMobileMenu}
+              onKeyDown={this.toggleMobileMenu}
               style={{ color: "black", background: "none" }}
             >
               {this.state.mobileMenuOpen ? (

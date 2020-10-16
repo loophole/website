@@ -13,7 +13,7 @@ const Features = () => (
           Whether you have a question about features, demo, or wish to help us
           improve our services, our team is ready to answer all your questions
           and listen to your feedback. Email us at{" "}
-          <a href="mailto: loophole@main.dev">loophole@main.dev</a>
+          <a href="mailto:loophole@main.dev">loophole@main.dev</a>
           &nbsp; and we would be happy to help!
         </FeatureText>
       </FeatureItem>

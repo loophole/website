@@ -11,10 +11,10 @@ const AccountMenu = () => {
       {isAuthenticated ? (
         <ButtonGroup>
           <ActionButtonLink to={"/profile"}>Profile</ActionButtonLink>
-          <ActionButtonSecondary onClick={logout}>Logout</ActionButtonSecondary>
+          <ActionButtonSecondary onClick={logout} onKeyDown={logout}>Logout</ActionButtonSecondary>
         </ButtonGroup>
       ) : (
-        <ActionButtonSecondary onClick={loginWithRedirect}>
+        <ActionButtonSecondary onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
           Login
         </ActionButtonSecondary>
       )}
@@ -51,7 +51,7 @@ const ActionButtonLink = styled(Link)`
   margin: 0;
   margin-left: 2px;
   display: inline-block;
-  color: white;
+  color: ${(props) => props.theme.color.white.regular};
   letter-spacing: 1px;
   margin-left: 2px;
   text-transform: uppercase;
@@ -66,6 +66,10 @@ const ActionButtonLink = styled(Link)`
   outline: 0px;
   text-decoration: none;
   background: ${(props) => props.theme.color.primary};
+
+  &:hover {
+    color: ${(props) => props.theme.color.white.regular};
+  }
 `;
 
 const ActionButtonSecondary = styled(ActionButton)`

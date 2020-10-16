@@ -47,9 +47,7 @@ const Features = () => {
               {isAuthenticated ? null : (
                 <span>
                   Don't have an account?{" "}
-                  <b>
-                    <a onClick={loginWithRedirect}>*Sign up*</a>
-                  </b>
+                  <ButtonLink onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>*Sign up*</ButtonLink>
                 </span>
               )}
               <br />
@@ -111,4 +109,8 @@ const Boxx = styled.div`
   padding: 8px;
   font-size: 105%;
   clear: left;
+`;
+
+const ButtonLink = styled.button`
+  font-weight: bold;
 `;
