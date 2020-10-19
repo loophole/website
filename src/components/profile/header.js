@@ -69,6 +69,10 @@ const HeaderTextGroup = styled.div`
   p {
     margin-bottom: 48px;
   }
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    text-align: center;
+  }
 `;
 
 const Flex = styled.div`
@@ -76,7 +80,7 @@ const Flex = styled.div`
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: ${(props) => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     grid-gap: 64px;
   }
@@ -92,8 +96,4 @@ const ImageWrapper = styled.div`
 
 const StyledImage = styled.img`
   width: 64px;
-  @media (max-width: ${(props) => props.theme.screen.sm}) {
-    width: 64px;
-    display: none;
-  }
 `;

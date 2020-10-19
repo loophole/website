@@ -14,6 +14,13 @@ const GetStarted = () => {
     window.open("https://github.com/loophole/cli/releases/latest");
   };
 
+  const subTitle = <Subtitle>
+    <b>
+      Or explore <Link to="/docs">Docs</Link> to see everything Loophole
+      can do!
+    </b>
+  </Subtitle>;
+
   return (
     <StyledSection>
       {!isAuthenticated ? (
@@ -22,23 +29,13 @@ const GetStarted = () => {
           <TryItButton onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
             Get early access
           </TryItButton>
-          <Subtitle>
-            {" "}
-            Or Explore <Link to="/docs">Docs</Link> to see everything Loophole
-            can do!
-          </Subtitle>
+          {subTitle}
         </GetStartedContainer>
       ) : (
           <GetStartedContainer>
             <GetStartedTitle>Get the latest release</GetStartedTitle>
             <TryItButton onClick={handleSubmit} onKeyDown={handleSubmit}>Download</TryItButton>
-            <Subtitle>
-              <b>
-                {" "}
-              Or explore <Link to="/docs">Docs</Link> to see everything Loophole
-              can do!{" "}
-              </b>{" "}
-            </Subtitle>
+            {subTitle}
           </GetStartedContainer>
         )}
     </StyledSection>

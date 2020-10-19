@@ -86,8 +86,9 @@ export const Brand = styled.div`
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: ${(props) => props.theme.screen.xs}) {
-    display: none;
+
+  @media (max-width: ${(props) => props.theme.screen.md}) {
+    flex-direction: column;
   }
 `;
 

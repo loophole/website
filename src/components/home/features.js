@@ -90,9 +90,10 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 `;
 
 const FeatureTitle = styled.h4`

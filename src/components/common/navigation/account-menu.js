@@ -6,26 +6,36 @@ import { Link } from "gatsby";
 const AccountMenu = () => {
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
   return (
-    <div>
-      {user && <span>Logged in as {user.nickname} </span>}
+    <AccountMenuWrapper>
       {isAuthenticated ? (
         <ButtonGroup>
           <ActionButtonLink to={"/profile"}>Profile</ActionButtonLink>
           <ActionButtonSecondary onClick={logout} onKeyDown={logout}>Logout</ActionButtonSecondary>
         </ButtonGroup>
       ) : (
-        <ActionButtonSecondary onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
-          Login
-        </ActionButtonSecondary>
-      )}
-    </div>
+          <ActionButtonSecondary onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
+            Login
+          </ActionButtonSecondary>
+        )}
+      {user && <span>Logged in as {user.nickname} </span>}
+    </AccountMenuWrapper>
   );
 };
 
 export default AccountMenu;
 
+const AccountMenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    text-align: right;
+    margin: 5px;
+  }
+`;
+
 const ButtonGroup = styled.div`
-  display: inline-block;
+  display: flex;
 `;
 
 const ActionButton = styled.button`
