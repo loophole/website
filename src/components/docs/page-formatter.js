@@ -112,6 +112,10 @@ export const pageQuery = graphql`
 
 const DocsContainer = styled(Container)`
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    flex-direction: column;
+  }
 `;
 
 const DocsMenu = styled.div`
@@ -119,6 +123,11 @@ const DocsMenu = styled.div`
   flex-shrink: 1;
   flex-basis: 230px;
   margin-right: 2.5rem;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    margin-right: 0;
+    margin: 20px;
+  }
 `;
 const DocsMenuGroup = styled.ul`
   list-style: none;

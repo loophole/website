@@ -29,18 +29,18 @@ const GetStarted = () => {
           </Subtitle>
         </GetStartedContainer>
       ) : (
-        <GetStartedContainer>
-          <GetStartedTitle>Get the latest release</GetStartedTitle>
-          <TryItButton onClick={handleSubmit} onKeyDown={handleSubmit}>Download</TryItButton>
-          <Subtitle>
-            <b>
-              {" "}
-              Or Explore <Link to="/docs">Docs</Link> to see everything Loophole
+          <GetStartedContainer>
+            <GetStartedTitle>Get the latest release</GetStartedTitle>
+            <TryItButton onClick={handleSubmit} onKeyDown={handleSubmit}>Download</TryItButton>
+            <Subtitle>
+              <b>
+                {" "}
+              Or explore <Link to="/docs">Docs</Link> to see everything Loophole
               can do!{" "}
-            </b>{" "}
-          </Subtitle>
-        </GetStartedContainer>
-      )}
+              </b>{" "}
+            </Subtitle>
+          </GetStartedContainer>
+        )}
     </StyledSection>
   );
 };
@@ -57,12 +57,12 @@ const GetStartedContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0 40px;
+  padding: 80px 20px 40px 20px;
+  text-align: center;
 `;
 
 const GetStartedTitle = styled.h3`
   margin: 0 auto 32px;
-  text-align: center;
 `;
 
 const TryItButton = styled.button`

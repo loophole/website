@@ -59,6 +59,7 @@ const HeaderWrapper = styled.header`
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   @media (max-width: ${(props) => props.theme.screen.md}) {
+    padding: 120px 20px 20px 20px;
   }
 `;
 const Subtitle = styled.h5`
@@ -141,7 +142,7 @@ const ImageWrapper = styled.div`
   justify-self: right;
   align-self: right;
   @media (max-width: ${(props) => props.theme.screen.md}) {
-    justify-self: right;
+    justify-self: left;
   }
 `;
 
@@ -152,6 +153,5 @@ const StyledImage = styled(Img)`
   }
   @media (max-width: ${(props) => props.theme.screen.sm}) {
     width: 300px;
-    display: none;
   }
 `;
