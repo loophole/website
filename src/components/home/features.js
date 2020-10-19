@@ -103,5 +103,5 @@ const FeatureTitle = styled.h4`
 `;
 
 const FeatureText = styled.p`
-  text-align: left;
+  text-align: center;
 `;

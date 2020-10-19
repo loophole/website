@@ -77,6 +77,10 @@ const Logo = styled.div`
   z-index: 9;
   text-decoration: none;
   outline: 0px;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    width: 100%;
+  }
 `;
 
 const BrandContainer = styled(Container)`
@@ -86,6 +90,7 @@ const BrandContainer = styled(Container)`
   align-items: flex-end;
 
   @media (max-width: ${(props) => props.theme.screen.sm}) {
+    align-items: center;
   }
 `;
 const FooterColumnContainer = styled(Container)`
@@ -94,8 +99,9 @@ const FooterColumnContainer = styled(Container)`
   grid-column-gap: 32px;
   justify-content: start;
   @media (max-width: ${(props) => props.theme.screen.sm}) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
+    text-align: center;
   }
 `;
 const FooterColumn = styled.div`

@@ -81,6 +81,10 @@ const HeaderTextGroup = styled.div`
   p {
     margin-bottom: 48px;
   }
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    text-align: center;
+  }
 `;
 
 const Flex = styled.div`

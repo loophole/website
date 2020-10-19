@@ -17,7 +17,7 @@ const Features = () => {
           <FeatureText>
             <Boxx>
               Please download the latest version of Loophole for your Operating
-              System and Architecture by clicking
+              System and Architecture by clicking{" "}
               <b>
                 <a
                   href="https://github.com/loophole/cli/releases"
@@ -43,7 +43,7 @@ const Features = () => {
           <FeatureTitle>Authenticate</FeatureTitle>
           <FeatureText>
             <Boxx>
-              Before you begin, the client must be authenticated.
+              Before you begin, the client must be authenticated.{" "}
               {isAuthenticated ? null : (
                 <span>
                   Don't have an account?{" "}
@@ -109,6 +109,10 @@ const Boxx = styled.div`
   padding: 8px;
   font-size: 105%;
   clear: left;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    font-size: 95%;
+  }
 `;
 
 const ButtonLink = styled.button`

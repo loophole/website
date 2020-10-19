@@ -159,8 +159,7 @@ const UsecasesItem = styled.div`
 
 const UsecasesTitle = styled.h5`
   color: ${(props) => props.theme.color.primary};
-  justify-content: left;
-  align-items: left;
+  text-align: center;
   letter-spacing: 0px;
   line-height: 20px;
   margin-bottom: 05px;
@@ -169,10 +168,9 @@ const UsecasesTitle = styled.h5`
 const UsecasesImage = styled(Img)`
   width: 60px;
   @media (max-width: ${(props) => props.theme.screen.md}) {
-    width: 400px;
+    width: 50px;
   }
   @media (max-width: ${(props) => props.theme.screen.sm}) {
-    width: 300px;
-    display: none;
+    width: 40px;
   }
 `;
