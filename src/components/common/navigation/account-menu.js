@@ -9,7 +9,7 @@ const AccountMenu = () => {
     <AccountMenuWrapper>
       {isAuthenticated ? (
         <ButtonGroup>
-          <ActionButtonLink to={"/profile"}>Profile</ActionButtonLink>
+          <ActionButtonLink to={"/profile"}><StyledImage src={user.picture} /></ActionButtonLink>
           <ActionButtonSecondary onClick={logout} onKeyDown={logout}>Logout</ActionButtonSecondary>
         </ButtonGroup>
       ) : (
@@ -17,7 +17,6 @@ const AccountMenu = () => {
             Login
           </ActionButtonSecondary>
         )}
-      {user && <span>Logged in as {user.nickname} </span>}
     </AccountMenuWrapper>
   );
 };
@@ -34,8 +33,13 @@ const AccountMenuWrapper = styled.div`
   }
 `;
 
+const StyledImage = styled.img`
+  width: 34px;
+`;
+
 const ButtonGroup = styled.div`
   display: flex;
+  height: 34px;
 `;
 
 const ActionButton = styled.button`
@@ -57,29 +61,14 @@ const ActionButton = styled.button`
 `;
 
 const ActionButtonLink = styled(Link)`
-  font-size: 12px;
-  margin: 0;
-  margin-left: 2px;
-  display: inline-block;
-  color: ${(props) => props.theme.color.white.regular};
-  letter-spacing: 1px;
-  margin-left: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 10px 16px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
-  text-decoration: none;
-  background: ${(props) => props.theme.color.primary};
-
-  &:hover {
-    color: ${(props) => props.theme.color.white.regular};
+  img {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
   }
+
+  margin-right: 10px;
 `;
 
 const ActionButtonSecondary = styled(ActionButton)`
