@@ -48,6 +48,10 @@ export default Summary;
 
 const ProfileContainer = styled(Container)`
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    flex-direction: column;
+  }
 `;
 
 const PersonalInformation = styled.div`
@@ -84,4 +88,10 @@ const UsageDetails = styled.div`
   margin-left: 30px;
   flex: 1 2 560px;
   padding: 3px;
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    flex: 0;
+    margin-top: 20px;
+    margin-left: 0;
+  }
 `;
