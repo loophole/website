@@ -99,7 +99,8 @@ const FeatureTitle = styled.h4`
   text-align: left;
 `;
 
-const FeatureText = styled.p`
+const FeatureText = styled.div`
+  padding: 10px;
   text-align: left;
 `;
 
