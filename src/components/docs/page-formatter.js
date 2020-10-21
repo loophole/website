@@ -95,7 +95,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___date] },
+      filter: {frontmatter: {type: {eq: "docs"}}}
+    ) {
       edges {
         node {
           id

@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: "commands/authentication"
 title: "Authentication"
 order: 1

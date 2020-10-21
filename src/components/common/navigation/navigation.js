@@ -18,7 +18,7 @@ import {
 } from "./style";
 
 const NAV_ITEMS = ["Features"];
-const PAGE_ITEMS = ["Download", "Docs"];
+const PAGE_ITEMS = ["Download", "Docs", "Blog"];
 
 export default class Navigation extends Component {
   state = {

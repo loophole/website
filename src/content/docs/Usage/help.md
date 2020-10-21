@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: "commands/help"
 title: "Instant help on CLI"
 order: 2

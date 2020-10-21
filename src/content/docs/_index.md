@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: ""
 title: "Overview"
 order: 0

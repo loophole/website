@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: "faq"
 title: "FAQ"
 order: 10
