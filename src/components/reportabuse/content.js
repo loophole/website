@@ -13,6 +13,10 @@ const Content = () => {
   const [messageValid, setMessageValid] = useState(true);
   const { user } = useAuth0();
 
+  if (user && user.email && mail !== user.email) {
+    setMail(user.email);
+  }
+
   const changeUrl = (currentUrl) => {
     if (currentUrl.length > 40) {
       currentUrl = currentUrl.substr(0, 40);
@@ -49,58 +53,50 @@ const Content = () => {
         <SectionTitle>Report abuse</SectionTitle>
         <ContentWrapper>
           <ContentText>
-            {
-              user ?
-                <ReportAbuseContent>
-                  <ReportAbuseContentRow>
-                    Unfortunately, bad people do exist. If you've seen a Loophole URL that looks suspicious, violates our Terms of Service, or any laws, let us know about it and we'll take care of it.
+            <ReportAbuseContent>
+              <ReportAbuseContentRow>
+                Unfortunately, bad people do exist. If you've seen a Loophole URL that looks suspicious, violates our Terms of Service, or any laws, let us know about it and we'll take care of it.
               </ReportAbuseContentRow>
-                  <ReportAbuseContentRow>
-                    <ReportAbuseContentRowLabel>
-                      Reported site url:
-                    </ReportAbuseContentRowLabel>
-                    <ReportAbuseContentRowInput>
-                      <TextFieldWithSuffix>
-                        <input type="text" value={url} className="reported-url-textfield" onChange={(e) => changeUrl(e.target.value)} maxLength="40" />
-                        <span className="reported-url-suffix">.loophole.site</span>
-                      </TextFieldWithSuffix>
-                    </ReportAbuseContentRowInput>
-                    <ReportAbuseContentRowValidation>
-                      <img src={InvalidIcon} alt="!" className={urlValid ? undefined : "invalid"} />
-                    </ReportAbuseContentRowValidation>
-                  </ReportAbuseContentRow>
-                  <ReportAbuseContentRow>
-                    <ReportAbuseContentRowLabel>
-                      Message:
-                  </ReportAbuseContentRowLabel>
-                    <ReportAbuseContentRowInput>
-                      <textarea rows="5" value={message} onChange={(e) => changeMessage(e.target.value)} maxLength="400" />
-                    </ReportAbuseContentRowInput>
-                    <ReportAbuseContentRowValidation>
-                      <img src={InvalidIcon} alt="!" className={messageValid ? undefined : "invalid"} />
-                    </ReportAbuseContentRowValidation>
-                  </ReportAbuseContentRow>
-                  <ReportAbuseContentRow>
-                    <ReportAbuseContentRowLabel>
-                      Email-address (optional):
-                    </ReportAbuseContentRowLabel>
-                    <ReportAbuseContentRowInput>
-                      <input type="text" value={mail} onChange={(e) => setMail(e.target.value)} />
-                    </ReportAbuseContentRowInput>
-                    <ReportAbuseContentRowValidation />
-                  </ReportAbuseContentRow>
-                  <ReportAbuseContentRow>
-                    <ActionButton onClick={() => report()} onKeyDown={() => report()}>
-                      Report
-                </ActionButton>
-                  </ReportAbuseContentRow>
-                </ReportAbuseContent> :
-                <ReportAbuseContent>
-                  <ReportAbuseContentRow>
-                    Please log in to report abuse!
+              <ReportAbuseContentRow>
+                <ReportAbuseContentRowLabel>
+                  Reported site url:
+                </ReportAbuseContentRowLabel>
+                <ReportAbuseContentRowInput>
+                  <TextFieldWithSuffix>
+                    <input type="text" value={url} className="reported-url-textfield" onChange={(e) => changeUrl(e.target.value)} maxLength="40" />
+                    <span className="reported-url-suffix">.loophole.site</span>
+                  </TextFieldWithSuffix>
+                </ReportAbuseContentRowInput>
+                <ReportAbuseContentRowValidation>
+                  <img src={InvalidIcon} alt="!" className={urlValid ? undefined : "invalid"} />
+                </ReportAbuseContentRowValidation>
               </ReportAbuseContentRow>
-                </ReportAbuseContent>
-            }
+              <ReportAbuseContentRow>
+                <ReportAbuseContentRowLabel>
+                  Message:
+              </ReportAbuseContentRowLabel>
+                <ReportAbuseContentRowInput>
+                  <textarea rows="5" value={message} onChange={(e) => changeMessage(e.target.value)} maxLength="400" />
+                </ReportAbuseContentRowInput>
+                <ReportAbuseContentRowValidation>
+                  <img src={InvalidIcon} alt="!" className={messageValid ? undefined : "invalid"} />
+                </ReportAbuseContentRowValidation>
+              </ReportAbuseContentRow>
+              <ReportAbuseContentRow>
+                <ReportAbuseContentRowLabel>
+                  Email-address (optional):
+                </ReportAbuseContentRowLabel>
+                <ReportAbuseContentRowInput>
+                  <input type="text" value={mail} onChange={(e) => setMail(e.target.value)} />
+                </ReportAbuseContentRowInput>
+                <ReportAbuseContentRowValidation />
+              </ReportAbuseContentRow>
+              <ReportAbuseContentRow>
+                <ActionButton onClick={() => report()} onKeyDown={() => report()}>
+                  Report
+            </ActionButton>
+              </ReportAbuseContentRow>
+            </ReportAbuseContent>
           </ContentText>
         </ContentWrapper>
       </StyledContainer>
