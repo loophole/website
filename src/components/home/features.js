@@ -14,7 +14,7 @@ const Features = () => (
             Easy HTTPS
           </FeatureTitle>
             <FeatureText>
-              Instantly create a public HTTPS url for a website running locally on your development machine. 
+              Instantly create a public HTTPS URL for a website running locally on your development machine. 
            </FeatureText>
         </FeatureItem>
         <FeatureItem>
@@ -32,21 +32,21 @@ const Features = () => (
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Multiple tunnels</FeatureTitle>
+          <FeatureTitle>Multiple Tunnels</FeatureTitle>
           <FeatureText>
           Run multiple tunnels simultaneously with a single loophole client.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Authenticated tunnels</FeatureTitle>
+          <FeatureTitle>Authenticated Tunnels</FeatureTitle>
           <FeatureText>
           We offer Basic Auth or Bearer Token authentication strategies to limit access for safety.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>No Setups required</FeatureTitle>
+          <FeatureTitle>Quick Setup</FeatureTitle>
           <FeatureText>
-         You are protected from exposing your network and the hassle of firewall setups or reverse proxies. 
+         You are protected from the time consuming hassle of firewall setups or reverse proxies. 
           </FeatureText>
         </FeatureItem>
 

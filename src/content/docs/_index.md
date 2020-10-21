@@ -13,9 +13,8 @@ Loophole comes as a Command-line (CLI) tool and is cross-platform (Linux, Window
 
 ## Supported Tunnels
 
-1. HTTP
-2. HTTPS
-3. TCP /UDP / TLS *(coming soon)*
+1. HTTPS
+2. TCP / UDP / TLS *(coming soon)*
 
 ## Supported Platforms
 
@@ -24,11 +23,6 @@ Loophole comes as a Command-line (CLI) tool and is cross-platform (Linux, Window
 3. Mac
 
 ## Regions 
-Currently, the available regions that you can issue tunnels to are:
-
-1. United States
-2. Europe
-3. Asia Pacific
-4. Australia 
+Currently, the our servers are hosted in Germany (Europe) in accordance to GDPR.
 
 **For feedback on Loophole email us at: <a href = "mailto: loophole@main.dev">loophole@main.dev</a>**

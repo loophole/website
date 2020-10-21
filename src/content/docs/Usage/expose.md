@@ -28,7 +28,7 @@ $ loophole 8000 --hostname testmywebsite
 
 ### Verbose Mode
 
-Verbose mode flag helps you understand loophole in a greater context. IT provides the verbose output for the command used along.
+Verbose mode flag helps you understand loophole in a greater context. It provides the verbose output for the command used along.
 
 ```bash
 $ loophole 8000 --verbose

@@ -80,7 +80,7 @@ const Usecases = () => {
           </UsecasesItem>
           <UsecasesItem>
           <UsecasesImage fluid={data.connection.childImageSharp.fluid} />
-            <UsecasesTitle>Building peers to peer apps</UsecasesTitle>
+            <UsecasesTitle>Building peer to peer apps</UsecasesTitle>
           </UsecasesItem>
           <UsecasesItem>
               <UsecasesImage fluid={data.database.childImageSharp.fluid} />

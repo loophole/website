@@ -3,7 +3,9 @@ slug: "commands/Help"
 title: "Instant help on CLI"
 ---
 
-With help command, you can get an instant brief description on the command and the flags that can be used along.
+<br/>
+
+With help command, you can get an instant brief description of the command.
 
 
 ```bash
