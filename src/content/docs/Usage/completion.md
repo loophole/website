@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: "commands/completion"
 title: "Completion"
 order: 4

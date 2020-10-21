@@ -1,4 +1,5 @@
 ---
+type: docs
 slug: "commands/expose"
 title: "Expose a local webserver to the internet"
 order: 3
