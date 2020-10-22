@@ -5,6 +5,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import InvalidIcon from "../../images/product/invalid.png"
 import { Section, Container } from "../global";
 
+let prefill = true;
+
 const Content = () => {
   const [url, setUrl] = useState("");
   const [message, setMessage] = useState("");
@@ -13,8 +15,9 @@ const Content = () => {
   const [messageValid, setMessageValid] = useState(true);
   const { user } = useAuth0();
 
-  if (user && user.email && mail !== user.email) {
+  if (user && user.email && prefill) {
     setMail(user.email);
+    prefill = false;
   }
 
   const changeUrl = (currentUrl) => {
