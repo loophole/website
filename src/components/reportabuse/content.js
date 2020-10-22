@@ -64,12 +64,12 @@ const Content = () => {
                 <ReportAbuseContentRowLabel>
                   Reported site url:
                 </ReportAbuseContentRowLabel>
-                <ReportAbuseContentRowInput>
+                <ReportAbuseContentRowInputWrapper>
                   <TextFieldWithSuffix>
-                    <input type="text" value={url} className="reported-url-textfield" onChange={(e) => changeUrl(e.target.value)} maxLength="40" />
+                    <ReportAbuseContentRowInput type="text" value={url} className="reported-url-textfield" onChange={(e) => changeUrl(e.target.value)} maxLength="40" />
                     <span className="reported-url-suffix">.loophole.site</span>
                   </TextFieldWithSuffix>
-                </ReportAbuseContentRowInput>
+                </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation>
                   <img src={InvalidIcon} alt="!" className={urlValid ? undefined : "invalid"} />
                 </ReportAbuseContentRowValidation>
@@ -78,9 +78,9 @@ const Content = () => {
                 <ReportAbuseContentRowLabel>
                   Message:
               </ReportAbuseContentRowLabel>
-                <ReportAbuseContentRowInput>
+                <ReportAbuseContentRowInputWrapper>
                   <textarea rows="5" value={message} onChange={(e) => changeMessage(e.target.value)} maxLength="400" />
-                </ReportAbuseContentRowInput>
+                </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation>
                   <img src={InvalidIcon} alt="!" className={messageValid ? undefined : "invalid"} />
                 </ReportAbuseContentRowValidation>
@@ -89,9 +89,9 @@ const Content = () => {
                 <ReportAbuseContentRowLabel>
                   Email-address (optional):
                 </ReportAbuseContentRowLabel>
-                <ReportAbuseContentRowInput>
-                  <input type="text" value={mail} onChange={(e) => setMail(e.target.value)} />
-                </ReportAbuseContentRowInput>
+                <ReportAbuseContentRowInputWrapper>
+                  <ReportAbuseContentRowInput type="text" value={mail} onChange={(e) => setMail(e.target.value)} />
+                </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation />
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
@@ -163,6 +163,13 @@ const ReportAbuseContentRow = styled.div`
   textarea {
     width: 100%;
     resize: none;
+    border: 1px solid ${props => props.theme.color.secondary};
+    border-radius: 4px;
+    padding: 8px 16px;
+    outline: 0px;
+    &:focus {
+      box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
+    }
   }
 
   img {
@@ -180,6 +187,7 @@ const ReportAbuseContentRow = styled.div`
 
 const ReportAbuseContentRowLabel = styled.div`
   flex: 0 1 300px;
+  padding: 16px;
 
   @media (max-width: ${(props) => props.theme.screen.sm}) {
     flex: 0 1 30px;
@@ -187,27 +195,57 @@ const ReportAbuseContentRowLabel = styled.div`
   }
 `;
 
-const ReportAbuseContentRowInput = styled.div`
+const ReportAbuseContentRowInputWrapper = styled.div`
   flex: 1 1 auto;
 `;
+
+const ReportAbuseContentRowInput = styled.input`
+  font-weight: 500;
+  color: ${props => props.theme.color.primary};
+  line-height: 42px;
+  width: 100%;
+  text-align: left;
+  height: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${props => props.theme.color.secondary};
+  border-image: initial;
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: 0px;
+  &:focus {
+    box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin-bottom: 8px;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    display: block;
+    width: 100%;
+  }
+`
 
 const TextFieldWithSuffix = styled.div`
   display: flex;
   min-width: 300px;
   input.reported-url-textfield {
-    border-top: 1px solid ${(props) => props.theme.color.border};
-    border-left: 1px solid ${(props) => props.theme.color.border};
-    border-bottom: 1px solid ${(props) => props.theme.color.border};
+    border-top: 1px solid ${(props) => props.theme.color.secondary};
+    border-left: 1px solid ${(props) => props.theme.color.secondary};
+    border-bottom: 1px solid ${(props) => props.theme.color.secondary};
     border-right: 0px;
     flex: 1 1 auto;
+
+    &:focus {
+      box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
+    }
   }
 
   span.reported-url-suffix {
-    border-top: 1px solid ${(props) => props.theme.color.border};
-    border-right: 1px solid ${(props) => props.theme.color.border};
-    border-bottom: 1px solid ${(props) => props.theme.color.border};
+    border-top: 1px solid ${(props) => props.theme.color.secondary};
+    border-right: 1px solid ${(props) => props.theme.color.secondary};
+    border-bottom: 1px solid ${(props) => props.theme.color.secondary};
     border-left: 1px dotted ${(props) => props.theme.color.secondary};
-    padding: 5px;
+    padding: 16px 8px;
     background-color: ${(props) => props.theme.color.background.white};
     flex: 0 1 150px;
   }
