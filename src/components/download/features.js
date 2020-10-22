@@ -34,7 +34,7 @@ const Features = () => {
             <Boxx>
               Before you begin, the client must be authenticated.
               {isAuthenticated ?
-                null : <span>Don't have an account? <b><a onClick={loginWithRedirect}>*Sign up*</a></b></span>
+                null : <span>Don't have an account? <b><a onClick={loginWithRedirect}>Sign up here!</a></b></span>
               }
               <br /><br />
               To authenticate your CLI, execute

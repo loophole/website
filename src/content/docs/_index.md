@@ -23,6 +23,6 @@ Loophole comes as a Command-line (CLI) tool and is cross-platform (Linux, Window
 3. Mac
 
 ## Regions 
-Currently, the our servers are hosted in Germany (Europe) in accordance to GDPR.
+Currently, our servers are hosted in Germany (Europe) in accordance to GDPR.
 
 **For feedback on Loophole email us at: <a href = "mailto: loophole@main.dev">loophole@main.dev</a>**

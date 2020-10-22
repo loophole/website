@@ -26,12 +26,34 @@ Usage:
 $ loophole 8000 --hostname testmywebsite
 ```
 
+
+### QR Version
+
+Loopole URLs can now be incorporated as QR codes too. Simply use the QR flag while defining the port number. Share this QR code at an event or a seminar with 100s of users simultaneously.
+
+```bash
+$ loophole 8000 --qr
+```
+
+### Identity File
+
+Identity file flag lets you add the private key path. Default path will always be shown in the CLI.
+
+```bash
+ --i, --identity-file string
+```
+
 ### Verbose Mode
 
 Verbose mode flag helps you understand loophole in a greater context. It provides the verbose output for the command used along.
 
 ```bash
 $ loophole 8000 --verbose
+```
+or you could simply use --v 
+
+```bash
+$ loophole 8000 --v
 ```
 
 ### Current Loophole Version
