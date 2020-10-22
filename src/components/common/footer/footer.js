@@ -1,9 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-
-import { Container } from "../../global"
+import { Container } from "../../global";
 
 const Footer = () => (
   <FooterWrapper id="footer">
@@ -11,24 +10,44 @@ const Footer = () => (
       <FooterColumn>
         <span>Company</span>
         <ul>
-          <li><Link  to="/contact">Contact</Link></li>
-          <li><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
-          <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/terms-and-conditions">Terms and Conditions</Link>
+          </li>
+          <li>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
         <span>Community</span>
         <ul>
-          <li><Link  to="https://github.com/loophole/cli/releases" target="_blank">Github</Link></li>
-          <li><Link  to="https://twitter.com/Loophole_cloud"target="_blank">Twitter</Link></li>
-          <li><Link  to="https://testandset.com/"target="_blank">TestAndSet</Link></li>
+          <li>
+            <a href="https://github.com/loophole/cli/releases" target="_blank" rel="noreferrer">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Loophole_cloud" target="_blank" rel="noreferrer">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://testandset.com/" target="_blank" rel="noreferrer">
+              TestAndSet
+            </a>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span><Link to="/abuse"> Report Abuse </Link></span>
+        <span>
+          <Link to="/abuse"> Report Abuse </Link>
+        </span>
         <ul>
           <li>Made with Love in Germany and Poland! </li>
-          <li>© 2020 Main Development GmbH All rights reserved.  </li>
+          <li>© 2020 Main Development GmbH All rights reserved. </li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
@@ -36,18 +55,18 @@ const Footer = () => (
       <Logo>loophole</Logo>
     </BrandContainer>
   </FooterWrapper>
-)
+);
 
 const FooterWrapper = styled.footer`
   background-color: white;
   margin: 80px 0 0;
   padding: 0 0 80px;
-`
+`;
 
 const Logo = styled.div`
-  font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.regular};
-  color: ${props => props.theme.color.black.regular};
+  font-family: ${(props) => props.theme.font.extrabold};
+  ${(props) => props.theme.font_size.regular};
+  color: ${(props) => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
   margin: 0;
@@ -58,7 +77,11 @@ const Logo = styled.div`
   z-index: 9;
   text-decoration: none;
   outline: 0px;
-`
+
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    width: 100%;
+  }
+`;
 
 const BrandContainer = styled(Container)`
   position: relative;
@@ -66,36 +89,38 @@ const BrandContainer = styled(Container)`
   display: flex;
   align-items: flex-end;
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    align-items: center;
   }
-`
+`;
 const FooterColumnContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 32px;
   justify-content: start;
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    grid-template-columns: 1fr;
     grid-gap: 20px;
+    text-align: center;
   }
-`
+`;
 const FooterColumn = styled.div`
   span {
     font-size: 16px;
-    font-family: ${props => props.theme.font.bold};
-    color: ${props => props.theme.color.primary};
+    font-family: ${(props) => props.theme.font.bold};
+    color: ${(props) => props.theme.color.primary};
   }
   ul {
     list-style: none;
     margin: 16px 0;
     padding: 0;
-    color: ${props => props.theme.color.black.regular};
+    color: ${(props) => props.theme.color.black.regular};
     li {
       margin-bottom: 12px;
-      font-family: ${props => props.theme.font.normal};
+      font-family: ${(props) => props.theme.font.normal};
       font-size: 15px;
     }
   }
-`
+`;
 
-export default Footer
+export default Footer;

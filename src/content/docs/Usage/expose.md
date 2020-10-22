@@ -1,27 +1,27 @@
 ---
 slug: "commands/expose"
-title: "Expose a local webserver to the internet "
+title: "Expose a local webserver to the internet"
+order: 3
 ---
 
 If you don't know what port your web server is listening on, it's probably port 8000, the default for HTTP.
 
-Example:  Expose a web server on port 8000 of your local machine to the internet.
+Example: Expose a web server on port 8000 of your local machine to the internet.
 
 ```bash
 $ loophole 8000
 ```
 
-
 ## Flags:
 
+### Custom Subdomain Names
 
-### Custom Subdomain Names 
-
-Loophole assigns random hexadecimal names to the HTTP tunnels it opens for you. This is okay for one-time personal uses. But if you're displaying the URL at a hackathon or integrating with a third-party webhook, it can be frustrating if the tunnel name changes or is difficult to read. 
+Loophole assigns random hexadecimal names to the HTTP tunnels it opens for you. This is okay for one-time personal uses. But if you're displaying the URL at a hackathon or integrating with a third-party webhook, it can be frustrating if the tunnel name changes or is difficult to read.
 
 You can specify a custom subdomain for your tunnel URL with the `--hostname` flag
 
 Usage:
+
 ```bash
 $ loophole 8000 --hostname testmywebsite
 ```

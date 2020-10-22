@@ -48,6 +48,6 @@ const theme = {
     md: "991px",
     lg: "1199px",
   },
-}
+};
 
-export default theme
+export default theme;
