@@ -19,6 +19,9 @@ const Footer = () => (
           <li>
             <Link to="/privacy-policy">Privacy Policy</Link>
           </li>
+          <li>
+            <Link to="/abuse">Report Abuse</Link>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn>
@@ -42,9 +45,6 @@ const Footer = () => (
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>
-          <Link to="/abuse"> Report Abuse </Link>
-        </span>
         <ul>
           <li>Made with Love in Germany and Poland! </li>
           <li>© 2020 Main Development GmbH All rights reserved. </li>
