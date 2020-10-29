@@ -23,32 +23,33 @@ const Blog = ({ data }) => {
             <Section id="Contact Us!">
                 <Container>
                     <SectionTitle>Current blog posts</SectionTitle>
-                    {posts.length === 0 ? "Sorry, currently there are no blog posts available" : <ol style={{ listStyle: `none` }}>
-                        {posts.map(post => {
-                            const title = post.frontmatter.title;
+                    {posts.length === 0 ? "Sorry, currently there are no blog posts available" :
+                        <ol style={{ listStyle: `none` }}>
+                            {posts.map(post => {
+                                const title = post.frontmatter.title;
 
-                            return (
-                                <li key={post.frontmatter.slug}>
-                                    <article>
-                                        <header>
-                                            <BlogTitle>
-                                                <BlogTitleLink to={post.frontmatter.slug}>{title}</BlogTitleLink>
-                                            </BlogTitle>
-                                            <small>{post.frontmatter.date}</small>
-                                        </header>
-                                        <section>
-                                            <p
-                                                dangerouslySetInnerHTML={{
-                                                    __html: post.excerpt,
-                                                }}
-                                                itemProp="description"
-                                            />
-                                        </section>
-                                    </article>
-                                </li>
-                            )
-                        })}
-                    </ol>}
+                                return (
+                                    <Post key={post.frontmatter.slug}>
+                                        <article>
+                                            <header>
+                                                <BlogTitle>
+                                                    <BlogTitleLink to={post.frontmatter.slug}>{title}</BlogTitleLink>
+                                                </BlogTitle>
+                                                <small>{post.frontmatter.date}</small>
+                                            </header>
+                                            <section>
+                                                <p
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: post.excerpt,
+                                                    }}
+                                                    itemProp="description"
+                                                />
+                                            </section>
+                                        </article>
+                                    </Post>
+                                )
+                            })}
+                        </ol>}
                 </Container>
             </Section>
             <GetStarted />
@@ -88,6 +89,12 @@ const SectionTitle = styled.h3`
     justify-content: center;
     margin: 0 auto 40px;
     text-align: center;
+`;
+
+const Post = styled.li`
+  border-bottom: 1px solid ${(props) => props.theme.color.black.lightest};
+  padding: 1rem;
+  margin-bottom: 1rem;
 `;
 
 const BlogTitle = styled.h2`

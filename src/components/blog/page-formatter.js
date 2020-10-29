@@ -29,7 +29,6 @@ const BlogPage = ({
             <BlogContentSubtitle>
               {data.markdownRemark.frontmatter.date} - {data.markdownRemark.timeToRead} min read - <Link to={"/blog"}>Go back</Link>
             </BlogContentSubtitle>
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.tableOfContents }} />
             <BlogContentText
               dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
@@ -55,11 +54,6 @@ export const pageQuery = graphql`
         value
       }
       timeToRead
-      tableOfContents(
-        pathToSlugField: "frontmatter.slug"
-        maxDepth: 2
-        absolute: false
-      )
       frontmatter {
         slug
         title
