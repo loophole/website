@@ -11,12 +11,6 @@ import Footer from "../common/footer/footer";
 
 import Header from "./header";
 
-const handleMenuClick = (e) => {
-  e.preventDefault();
-  e.target.parentElement.lastElementChild.style.display === "none"
-    ? (e.target.parentElement.lastElementChild.style.display = "")
-    : (e.target.parentElement.lastElementChild.style.display = "none");
-};
 
 const BlogPage = ({
   data, // this prop will be injected by the GraphQL query below.
@@ -84,7 +78,7 @@ const BlogContent = styled.div`
   flex-shrink: 3;
   flex-basis: 500px;
   max-width: 900px;
-`;
+  `;
 
 const BlogContentTitle = styled.h1`
   color: ${(props) => props.theme.color.primary};
@@ -99,6 +93,7 @@ letter-spacing: 0px;
 `;
 
 const BlogContentText = styled.p`
+  padding-left: 4rem;
   h1 {
     font-size: 2.25em;
   }

@@ -43,6 +43,13 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: 'Default Dark+' // Or install your favorite theme from GitHub
+            }
+          },
+          `gatsby-remark-copy-linked-files`,
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
