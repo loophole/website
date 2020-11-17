@@ -5,9 +5,7 @@ title: "Get Started with Loophole!"
 date: "2020.10.29"
 ---
 
-### Aspire to expose your localhost to the Internet with minimal effort? Do you wish to avoid going through the tedious deployment process ? 
-
-<font size="4"> Let me introduce you to Loophole. </font>
+Aspire to expose your localhost to the Internet with minimal effort?Do you wish to avoid going through the tedious deployment process? Let me introduce you to Loophole. 
 
  ### So, what's Loophole?
 
@@ -15,7 +13,7 @@ date: "2020.10.29"
 
  ### Let's give Loophole a try!
 
-Firstly, create an account with Loophole . By creating an account, you get access to all the features loophole provides in its beta version. [Download the latest version of Loophole here.](\download)
+Firstly, create an account with Loophole . By creating an account, you get access to all the features loophole provides in its beta version. Next, [Download the latest version of Loophole here.](\download)
 <br/>
 <br/>
 
@@ -33,13 +31,18 @@ $ unzip /path/to/loophole.zip
 
  **Authenticating Loophole CLI for all feature access**
 
+Once you've signed up, you need to configure loophole with the authtoken.with authtoken, you get access to account-only features. Loophole has a simple 'account' command to make this easy. Under the hood, the login command adds (or modify) the authtoken property in your loophole configuration file. 
+<br />
+
 ![Authentication](https://media.giphy.com/media/S5Q7Hbp9kedjGJZqPb/giphy.gif)
 
-![Authentication](loophole_8000_updated.gif)
+<br/>
 
 **Running our local server project**
 
- Here we consider a simple gatsby server for representation purposes. **The webapp is running on port 8000.** 
+ Meanwhile, we need to have a webapp running. Here we consider a simple gatsby server for representation purposes.
+
+ **Note : The webapp is running on port 8000.** 
 
 ```javascript
 const os = require('os');
@@ -57,13 +60,13 @@ app.listen(port, () => {
   console.log(`demo-app listening on port ${port}`);
 });
 ```
+Now all we have to do is let Loophole know the port our local server is running on! After authentication,follow the below instructions:
 
-Now all we have to do let Loophole know the port our local server is running on! After authentication,follow the below instructions:
 
 ![Authentication](https://media.giphy.com/media/9tZZ0SznwTWR0r0xUq/giphy.gif)
 
 
-Note: **If your app is running on a different port , just replace 8000 with your respective port.**
+**Tip :If your app is running on a different port , just replace 8000 with your respective port.**
 
 **Example** - For an app running on port 8080, the command will be 
 
