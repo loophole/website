@@ -1,6 +1,6 @@
 ---
 type: blog
-slug: "get-started-with-loophole!"
+slug: "get-started-with-loophole"
 title: "Get Started with Loophole!"
 date: "2020.10.29"
 ---
