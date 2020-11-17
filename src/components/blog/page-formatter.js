@@ -86,7 +86,7 @@ color: ${(props) => props.theme.color.primary};
 letter-spacing: 0px;
 `;
 
-const BlogContentText = styled.p`
+const BlogContentText = styled.div`
   padding-left: 4rem;
   h1 {
     font-size: 2.25em;

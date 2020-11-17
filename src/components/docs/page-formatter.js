@@ -187,7 +187,7 @@ const DocsContentTitle = styled.h1`
   margin-bottom: 1.5rem;
 `;
 
-const DocsContentText = styled.p`
+const DocsContentText = styled.div`
   h1 {
     font-size: 2.25em;
   }
