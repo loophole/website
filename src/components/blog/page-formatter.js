@@ -11,12 +11,6 @@ import Footer from "../common/footer/footer";
 
 import Header from "./header";
 
-const handleMenuClick = (e) => {
-  e.preventDefault();
-  e.target.parentElement.lastElementChild.style.display === "none"
-    ? (e.target.parentElement.lastElementChild.style.display = "")
-    : (e.target.parentElement.lastElementChild.style.display = "none");
-};
 
 const BlogPage = ({
   data, // this prop will be injected by the GraphQL query below.
@@ -35,7 +29,6 @@ const BlogPage = ({
             <BlogContentSubtitle>
               {data.markdownRemark.frontmatter.date} - {data.markdownRemark.timeToRead} min read - <Link to={"/blog"}>Go back</Link>
             </BlogContentSubtitle>
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.tableOfContents }} />
             <BlogContentText
               dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
@@ -61,11 +54,6 @@ export const pageQuery = graphql`
         value
       }
       timeToRead
-      tableOfContents(
-        pathToSlugField: "frontmatter.slug"
-        maxDepth: 2
-        absolute: false
-      )
       frontmatter {
         slug
         title
@@ -84,7 +72,7 @@ const BlogContent = styled.div`
   flex-shrink: 3;
   flex-basis: 500px;
   max-width: 900px;
-`;
+  `;
 
 const BlogContentTitle = styled.h1`
   color: ${(props) => props.theme.color.primary};
