@@ -28,6 +28,13 @@ const Header = () => {
   return (
     <HeaderWrapper id="logo">
       <Container>
+        <Banner>
+          <BannerTitle>Announcement</BannerTitle>
+          <p>
+            We are currently experiencing troubles with Let's Encrypt certificates rate-limiting,
+            therefore some tunnels may fail to be established. We're working on resolution. Please bear with us.
+          </p>
+        </Banner>
         <Flex>
           <HeaderTextGroup>
             <Subtitle>NOW IN BETA</Subtitle>
@@ -96,6 +103,19 @@ const HeaderTextGroup = styled.div`
   p {
     margin-bottom: 48px;
   }
+`;
+
+const Banner = styled.div`
+border: 1px solid ${(props) => props.theme.color.primary};
+padding: 5px;
+p {
+  padding: 5px;
+}
+`;
+
+const BannerTitle = styled.h4`
+margin: 0;
+padding: 5px;
 `;
 
 const Flex = styled.div`
