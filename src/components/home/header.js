@@ -31,8 +31,13 @@ const Header = () => {
         <Banner>
           <BannerTitle>Announcement</BannerTitle>
           <p>
-            We are currently experiencing troubles with Let's Encrypt certificates rate-limiting,
-            therefore some tunnels may fail to be established. We're working on resolution. Please bear with us.
+            We were experiencing troubles with certificates and we were forced to do some alignments in the client.{" "}
+            To enjoy full <em>loophole</em> experience without issues please update your client to version{" "}
+            <a href="https://github.com/loophole/cli/releases/tag/1.0.0-beta.8" target="_blank">1.0.0-beta.8</a>.
+            <br />
+            <br />
+            We are aware of the fact that some of people trying it out during that time and were unable to use <em>loophole</em>{" "}
+            and we are sorry for all the incovinience caused.
           </p>
         </Banner>
         <Flex>
