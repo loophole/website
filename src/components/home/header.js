@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <HeaderWrapper id="logo">
       <Container>
-        <Banner>
+        {/* <Banner>
           <BannerTitle>Announcement</BannerTitle>
           <p>
             We were experiencing troubles with certificates and we were forced to do some alignments in the client.{" "}
@@ -39,7 +39,7 @@ const Header = () => {
             We are aware of the fact that some of people trying it out during that time and were unable to use <em>loophole</em>{" "}
             and we are sorry for all the incovinience caused.
           </p>
-        </Banner>
+        </Banner> */}
         <Flex>
           <HeaderTextGroup>
             <Subtitle>NOW IN BETA</Subtitle>
