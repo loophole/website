@@ -29,8 +29,10 @@ const Features = () => {
   }, []);
 
   const windowsAssets = !loading ? release.data.assets.filter(a => a.name.includes('windows')) : [];
-  const linuxAsstes = !loading ? release.data.assets.filter(a => a.name.includes('linux')) : [];
+  const linuxAssets = !loading ? release.data.assets.filter(a => a.name.includes('linux')) : [];
   const macAssets = !loading ? release.data.assets.filter(a => a.name.includes('darwin')) : [];
+
+  const emptyAssets = !windowsAssets.length || !linuxAssets.length || !macAssets.length;
   return (
     <Section id="Download">
       <StyledContainer>
@@ -40,12 +42,12 @@ const Features = () => {
             <Boxx>
               Please download the latest version of Loophole for your Operating
               System and Architecture.
-              {loading || error ?
+              {loading || error || emptyAssets ?
                 <div>
                   {loading ? <h5>Loading possible download options...</h5> : null}
-                  {error ? <h5>Please head to{" "}
+                  {!loading && (error || emptyAssets) ? <h5>Please head to{" "}
                     <a href="https://github.com/loophole/cli/releases/latest" target="_blank" rel="noreferrer">GitHub</a>
-                    {" "}to get newest release</h5>: null}
+                    {" "}to get newest release.</h5>: null}
                 </div> :
                 <DownloadLinksContainer>
                   <DownloadLinksSection>
@@ -62,7 +64,7 @@ const Features = () => {
                   Linux
                   </DownloadLinksSectionTitle>
                     <DownloadLinksList>
-                    {linuxAsstes.map(a =>
+                    {linuxAssets.map(a =>
                       <li key={a.id}><a href={a.browser_download_url} target="_blank" rel="noreferrer">{a.name.split("_").pop().split('.')[0]}</a></li>)}
                     </DownloadLinksList>
                   </DownloadLinksSection>
@@ -82,7 +84,7 @@ const Features = () => {
               <pre>
                 <code>$ unzip /path/to/loophole.zip </code>
               </pre>
-              On Windows, just double click `loophole.zip`.
+              On Windows, just double click <em>loophole.zip</em>.
             </Boxx>
           </FeatureText>
         </FeatureItem>
