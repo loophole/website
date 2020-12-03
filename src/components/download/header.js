@@ -9,7 +9,7 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <h1>Download & Setup Loophole</h1>
+            <h1>Download &amp; Setup Loophole</h1>
           </HeaderTextGroup>
         </Flex>
       </Container>
