@@ -5,20 +5,21 @@ import { Link } from "gatsby";
 
 const AccountMenu = () => {
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
-  return (
-    <AccountMenuWrapper>
-      {isAuthenticated ? (
-        <ButtonGroup>
-          <ActionButtonLink to={"/profile"}><StyledImage src={user.picture} /></ActionButtonLink>
-          <ActionButtonSecondary onClick={logout} onKeyDown={logout}>Logout</ActionButtonSecondary>
-        </ButtonGroup>
-      ) : (
-          <ActionButtonSecondary onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
-            Login
-          </ActionButtonSecondary>
-        )}
-    </AccountMenuWrapper>
-  );
+  return null;
+  // return (
+  //   <AccountMenuWrapper>
+  //     {isAuthenticated ? (
+  //       <ButtonGroup>
+  //         <ActionButtonLink to={"/profile"}><StyledImage src={user.picture} /></ActionButtonLink>
+  //         <ActionButtonSecondary onClick={logout} onKeyDown={logout}>Logout</ActionButtonSecondary>
+  //       </ButtonGroup>
+  //     ) : (
+  //         <ActionButtonSecondary onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
+  //           Login
+  //         </ActionButtonSecondary>
+  //       )}
+  //   </AccountMenuWrapper>
+  // );
 };
 
 export default AccountMenu;
