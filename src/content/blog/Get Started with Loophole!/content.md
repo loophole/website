@@ -71,6 +71,9 @@ Now all we have to do is let Loophole know the port our local server is running 
 **Example** - For an app running on port 8080, the command will be 
 
 ```bash
+$ loophole http 8080
+# or ...
+# for 1.0.0-beta.8 and older
 $ loophole 8080
 ```
 and it fires a HTTPS secured tunnel for you!

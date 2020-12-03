@@ -1,18 +1,26 @@
 ---
 type: docs
 slug: "commands/expose"
-title: "Expose a local webserver to the internet"
+title: "Expose a local resource to the Internet"
 order: 3
 ---
 
-If you don't know what port your web server is listening on, it's probably port 8000, the default for HTTP.
+If you don't know what port your web server is listening on, check in the logs of your running application, it should tell you that.
+Some of the most common ones are 8080, 8000, 3000 or 1313.
 
-Example: Expose a web server on port 8000 of your local machine to the internet.
+Example: Expose a web server on port 8000 of your local machine to the Internet.
 
 ```bash
+$ loophole http 8000
+# or ...
+# for 1.0.0-beta.8 and older
 $ loophole 8000
 ```
 
+Example: Expose a directory from your local machine to the Internet.
+```bash
+$ loophole dir ./my/local/path --hostname testmywebsite
+```
 ## Flags:
 
 ### Custom Subdomain Names
@@ -24,7 +32,13 @@ You can specify a custom subdomain for your tunnel URL with the `--hostname` fla
 Usage:
 
 ```bash
+$ loophole http 8000 --hostname testmywebsite
+# or ...
+# for 1.0.0-beta.8 and older
 $ loophole 8000 --hostname testmywebsite
+```
+```bash
+$ loophole dir ./my/local/path --hostname testmywebsite
 ```
 
 ### Verbose Mode
@@ -32,13 +46,11 @@ $ loophole 8000 --hostname testmywebsite
 Verbose mode flag helps you understand loophole in a greater context. IT provides the verbose output for the command used along.
 
 ```bash
+$ loophole http 8000 --verbose
+# or ...
+# for 1.0.0-beta.8 and older
 $ loophole 8000 --verbose
 ```
-
-### Current Loophole Version
-
-Version flag provides the current installed version of Loophole in your local machine. This flag can be used directly without any command or any parameter as below:
-
 ```bash
-$ loophole --version
+$ loophole dir ./my/local/path --verbose
 ```

@@ -115,7 +115,12 @@ const Features = () => {
               change directory to the place you downloaded loophole and run this
               next:
               <pre>
-                <code>$ loophole 3000</code>
+                <code>
+                  $ loophole http 3000<br />
+                  # or ...<br />
+                  # for 1.0.0-beta.8 and older<br />
+                  $ loophole 3000
+                </code>
               </pre>
               Read the <Link to="/docs">documentation</Link> to get more ideas
               on how to use Loophole.

@@ -16,10 +16,10 @@ Did you ever wish to show your work to a client or colleague, or hoped for a sec
 
 ---
 ![Frustration](picture.jpg)
-source: unsplash.com
+<small>source: [unsplash.com](https://unsplash.com)</small>
 <br />
 
-> #### Staying Agile.
+#### Staying Agile.
 
 Loophole comes into play here. Loophole can be your next utility kit that creates an instantly secure, publicly accessible tunnel URL to an application that’s running on the localhost. In short, you can expose your local web server, APIs, databases, etc. So, It’s easier to expose your services when you don’t have big changes and don’t want to deploy it in your development environment.
 
