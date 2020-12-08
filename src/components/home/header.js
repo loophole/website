@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import { Container } from "../global";
@@ -50,7 +50,7 @@ const Header = () => {
               care of the rest!
             </h2>
 
-            <HeaderButton>Quickstart for free</HeaderButton>
+            <HeaderLink to="/download">Quickstart for free</HeaderLink>
           </HeaderTextGroup>
 
           <ImageWrapper>
@@ -134,7 +134,7 @@ const Flex = styled.div`
   }
 `;
 
-const HeaderButton = styled.button`
+const HeaderLink = styled(Link)`
   font-weight: 200;
   font-size: 16px;
   color: white;
@@ -145,6 +145,8 @@ const HeaderButton = styled.button`
   cursor: pointer;
   white-space: nowrap;
   background: ${(props) => props.theme.color.accent};
+  width: fit-content;
+  text-decoration: none;
 
   border-radius: 4px;
   padding: 10px 20px;
@@ -155,6 +157,8 @@ const HeaderButton = styled.button`
   outline: 0px;
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+    color: white;
+    text-decoration: none;
   }
   @media (max-width: ${(props) => props.theme.screen.md}) {
   }

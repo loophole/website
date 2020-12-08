@@ -23,7 +23,7 @@ const GetStarted = () => {
 
   return (
     <StyledSection>
-      {!isAuthenticated ? (
+      {/* {!isAuthenticated ? (
         <GetStartedContainer>
           <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
           <TryItButton onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>
@@ -31,13 +31,13 @@ const GetStarted = () => {
           </TryItButton>
           {subTitle}
         </GetStartedContainer>
-      ) : (
+      ) : ( */}
           <GetStartedContainer>
             <GetStartedTitle>Get the latest release</GetStartedTitle>
-            <TryItButton onClick={handleSubmit} onKeyDown={handleSubmit}>Download</TryItButton>
+            <TryItButton to="/download">Download &amp; Setup</TryItButton>
             {subTitle}
           </GetStartedContainer>
-        )}
+        {/* )} */}
     </StyledSection>
   );
 };
@@ -62,12 +62,11 @@ const GetStartedTitle = styled.h3`
   margin: 0 auto 32px;
 `;
 
-const TryItButton = styled.button`
+const TryItButton = styled(Link)`
   font-weight: 500;
   font-size: 14px;
   color: white;
   letter-spacing: 1px;
-  height: 60px;
   display: block;
   margin-left: 8px;
   text-transform: uppercase;
@@ -75,14 +74,14 @@ const TryItButton = styled.button`
   white-space: nowrap;
   background: ${(props) => props.theme.color.accent};
   border-radius: 4px;
-  padding: 0px 40px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
+  padding: 20px 40px;
+
+  margin: auto;
+  text-decoration: none;
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+    color: white;
+    text-decoration: none;
   }
   @media (max-width: ${(props) => props.theme.screen.md}) {
   }
