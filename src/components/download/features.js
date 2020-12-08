@@ -92,14 +92,9 @@ const Features = () => {
           <FeatureTitle>Authenticate</FeatureTitle>
           <FeatureText>
             <Boxx>
-              Before you begin, the client must be authenticated.{" "}
-              {isAuthenticated ? null : (
-                <span>
-                  Don't have an account?{" "}
-                  <ButtonLink onClick={loginWithRedirect} onKeyDown={loginWithRedirect}>*Sign up*</ButtonLink>
-                </span>
-              )}
               <br />
+              Firstly, open your favorite terminal and change directory to the place you downloaded loophole.
+                            <br />
               <br />
               To authenticate your CLI, execute
               <pre>
@@ -113,8 +108,7 @@ const Features = () => {
           <FeatureTitle>Test it!</FeatureTitle>
           <FeatureText>
             <Boxx>
-              To start an HTTP tunnel on port 3000, open your favorite terminal,
-              change directory to the place you downloaded loophole and run this
+              To start an HTTP tunnel on port 3000, execute this
               next:
               <pre>
                 <code>
