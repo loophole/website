@@ -111,7 +111,7 @@ const Content = () => {
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
                 {reportSendingSuccess ? <SuccessMessage>Succesfully sent report</SuccessMessage> : null}
-                {reportSendingFailure ? <SuccessMessage>There was an error sending the report, please try again</SuccessMessage> : null}
+                {reportSendingFailure ? <FailureMessage>There was an error sending the report, please try again</FailureMessage> : null}
 
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
