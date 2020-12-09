@@ -45,6 +45,8 @@ const Content = () => {
     setUrlValid(url.length !== 0);
     setMessageValid(message.length !== 0);
 
+    if (reportSendingSuccess) return;
+
     if (url.length === 0 || message.length === 0) {
       return;
     }
@@ -113,7 +115,7 @@ const Content = () => {
 
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
-                <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()}>
+                <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()} disabled={reportSendingSuccess}>
                   Report
                 </ActionButton>
               </ReportAbuseContentRow>
