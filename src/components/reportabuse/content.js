@@ -112,7 +112,6 @@ const Content = () => {
               <ReportAbuseContentRow>
                 {reportSendingSuccess ? <SuccessMessage>Succesfully sent report</SuccessMessage> : null}
                 {reportSendingFailure ? <FailureMessage>There was an error sending the report, please try again</FailureMessage> : null}
-
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
                 <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()} disabled={reportSendingSuccess}>
@@ -290,6 +289,11 @@ const ActionButton = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+
+  :disabled, [disabled] {
+    background-color: ${(props) => props.theme.color.secondaryLighter};
+    cursor: default;
+  }
 `;
 
 const Message = styled.div`
