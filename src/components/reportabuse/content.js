@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from 'axios';
 
 import InvalidIcon from "../../images/product/invalid.png"
 import { Section, Container } from "../global";
@@ -13,6 +14,8 @@ const Content = () => {
   const [mail, setMail] = useState("");
   const [urlValid, setUrlValid] = useState(true);
   const [messageValid, setMessageValid] = useState(true);
+  const [reportSendingSuccess, setReportSendingSuccess] = useState(false);
+  const [reportSendingFailure, setReportSendingFailure] = useState(false);
   const { user } = useAuth0();
 
   if (user && user.email && prefill) {
@@ -38,7 +41,7 @@ const Content = () => {
     setMessage(text)
   }
 
-  const report = () => {
+  const report = async () => {
     setUrlValid(url.length !== 0);
     setMessageValid(message.length !== 0);
 
@@ -46,8 +49,18 @@ const Content = () => {
       return;
     }
 
-    //TODO: send to backend
-    console.log('sendReport', url, message, mail);
+    try {
+      await axios.post('https://api.loophole.cloud/api/report-abuse', {
+        siteId: url,
+        message,
+        mail
+      });
+      setReportSendingSuccess(true);
+      setReportSendingFailure(false);
+    } catch (e) {
+      setReportSendingFailure(true);
+      setReportSendingSuccess(false);
+    }
   }
 
   return (
@@ -67,7 +80,7 @@ const Content = () => {
                 <ReportAbuseContentRowInputWrapper>
                   <TextFieldWithSuffix>
                     <ReportAbuseContentRowInput type="text" value={url} className="reported-url-textfield" onChange={(e) => changeUrl(e.target.value)} maxLength="40" />
-                    <span className="reported-url-suffix">.loophole.site</span>
+                    <span className="reported-url-suffix">.loophole.host</span>
                   </TextFieldWithSuffix>
                 </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation>
@@ -95,9 +108,14 @@ const Content = () => {
                 <ReportAbuseContentRowValidation />
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
-                <ActionButton onClick={() => report()} onKeyDown={() => report()}>
+                {reportSendingSuccess ? <SuccessMessage>Succesfully sent report</SuccessMessage> : null}
+                {reportSendingFailure ? <SuccessMessage>There was an error sending the report, please try again</SuccessMessage> : null}
+
+              </ReportAbuseContentRow>
+              <ReportAbuseContentRow>
+                <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()}>
                   Report
-            </ActionButton>
+                </ActionButton>
               </ReportAbuseContentRow>
             </ReportAbuseContent>
           </ContentText>
@@ -245,6 +263,7 @@ const TextFieldWithSuffix = styled.div`
     border-right: 1px solid ${(props) => props.theme.color.secondary};
     border-bottom: 1px solid ${(props) => props.theme.color.secondary};
     border-left: 1px dotted ${(props) => props.theme.color.secondary};
+    border-radius: 4px;
     padding: 16px 8px;
     background-color: ${(props) => props.theme.color.background.white};
     flex: 0 1 150px;
@@ -269,4 +288,34 @@ const ActionButton = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+`;
+
+const Message = styled.div`
+  padding: 1rem;
+  margin: auto;
+  width: 100%;
+
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-radius: 4px;
+`;
+
+const SuccessMessage = styled(Message)`
+color: ${(props) => props.theme.color.success.regular};
+  background-color:  ${(props) => props.theme.color.white.regular};
+  border-color:  ${(props) => props.theme.color.success.regular};
+
+  :before {
+    content: "✔ "
+  }
+`;
+const FailureMessage = styled(Message)`
+color: ${(props) => props.theme.color.error.regular};
+  background-color:  ${(props) => props.theme.color.white.regular};
+  border-color:  ${(props) => props.theme.color.error.regular};
+
+  :before {
+    content: "⚠ "
+  }
 `;

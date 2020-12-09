@@ -42,6 +42,21 @@ const theme = {
       light: "#564F62",
       regular: "#071435",
     },
+    success: {
+      regular: '#5CAB7D',
+      darker: '#5A9367',
+    },
+    error: {
+      light: '#DA8995',
+      regular: '#CC2936', 
+      darker: '#FF1B1C',
+      darkest: '#A41623'
+    },
+    warning: {
+      regular: '#E16036',
+      darker: '#FF7F11',
+      darkest: '#BC2C1A'
+    }
   },
   screen: {
     xs: "575px",
