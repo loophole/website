@@ -12,10 +12,10 @@ const Content = () => {
   const [url, setUrl] = useState("");
   const [message, setMessage] = useState("");
   const [mail, setMail] = useState("");
-  const [urlValid, setUrlValid] = useState(true);
-  const [messageValid, setMessageValid] = useState(true);
   const [reportSendingSuccess, setReportSendingSuccess] = useState(false);
   const [reportSendingFailure, setReportSendingFailure] = useState(false);
+  const [reportSendingFailureMessage, setReportSendingFailureMessage] = useState("");
+  const [isInitialEmpty, setInitialEmpty] = useState(true);
   const { user } = useAuth0();
 
   if (user && user.email && prefill) {
@@ -23,13 +23,27 @@ const Content = () => {
     prefill = false;
   }
 
+  const resetToInitialState = () => {
+    setMail("");
+    setMessage("");
+    setUrl("");
+    setInitialEmpty(true);
+  }
+
+  const isMessageValid = () => {
+    return isInitialEmpty || message.length !== 0
+  }
+  const isUrlValid = () => {
+    return isInitialEmpty || url.length !== 0
+  }
+
   const changeUrl = (currentUrl) => {
     if (currentUrl.length > 40) {
       currentUrl = currentUrl.substr(0, 40);
     }
 
-    setUrlValid(currentUrl.length !== 0);
-    setUrl(currentUrl)
+    setUrl(currentUrl);
+    setInitialEmpty(false);
   }
 
   const changeMessage = (text) => {
@@ -37,17 +51,15 @@ const Content = () => {
       text = text.substr(0, 400);
     }
 
-    setMessageValid(text.length !== 0);
-    setMessage(text)
+    setMessage(text);
+    setInitialEmpty(false);
   }
 
   const report = async () => {
-    setUrlValid(url.length !== 0);
-    setMessageValid(message.length !== 0);
-
-    if (reportSendingSuccess) return;
-
-    if (url.length === 0 || message.length === 0) {
+    if (isInitialEmpty || !isUrlValid() || !isMessageValid()) {
+      setInitialEmpty(false);
+      setReportSendingFailure(true);
+      setReportSendingFailureMessage("Please fix the fields marked as invalid and try again")
       return;
     }
 
@@ -57,9 +69,11 @@ const Content = () => {
         message,
         mail
       });
+      resetToInitialState();
       setReportSendingSuccess(true);
       setReportSendingFailure(false);
     } catch (e) {
+      setReportSendingFailureMessage("There was an error sending the report, please try again later or contact us directly via mail");
       setReportSendingFailure(true);
       setReportSendingSuccess(false);
     }
@@ -86,7 +100,7 @@ const Content = () => {
                   </TextFieldWithSuffix>
                 </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation>
-                  <img src={InvalidIcon} alt="!" className={urlValid ? undefined : "invalid"} />
+                  <img src={InvalidIcon} alt="!" className={isUrlValid() ? undefined : "invalid"} />
                 </ReportAbuseContentRowValidation>
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
@@ -97,7 +111,7 @@ const Content = () => {
                   <textarea rows="5" value={message} onChange={(e) => changeMessage(e.target.value)} maxLength="400" />
                 </ReportAbuseContentRowInputWrapper>
                 <ReportAbuseContentRowValidation>
-                  <img src={InvalidIcon} alt="!" className={messageValid ? undefined : "invalid"} />
+                  <img src={InvalidIcon} alt="!" className={isMessageValid() ? undefined : "invalid"} />
                 </ReportAbuseContentRowValidation>
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
@@ -111,10 +125,10 @@ const Content = () => {
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
                 {reportSendingSuccess ? <SuccessMessage>Succesfully sent report</SuccessMessage> : null}
-                {reportSendingFailure ? <FailureMessage>There was an error sending the report, please try again</FailureMessage> : null}
+                {reportSendingFailure ? <FailureMessage>{reportSendingFailureMessage}</FailureMessage> : null}
               </ReportAbuseContentRow>
               <ReportAbuseContentRow>
-                <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()} disabled={reportSendingSuccess}>
+                <ActionButton onClick={async () => await report()} onKeyDown={async () => await report()} >
                   Report
                 </ActionButton>
               </ReportAbuseContentRow>
