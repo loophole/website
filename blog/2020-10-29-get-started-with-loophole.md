@@ -36,7 +36,7 @@ $ unzip /path/to/loophole.zip
 
 Once you've signed up, you need to configure loophole with the authtoken.with authtoken, you get access to account-only features. Loophole has a simple 'account' command to make this easy. Under the hood, the login command adds (or modify) the authtoken property in your loophole configuration file. 
 
-![Authentication](https://media.giphy.com/media/S5Q7Hbp9kedjGJZqPb/giphy.gif)
+![Authentication](/img/blog/2020-10-29-get-started-with-loophole/account-login.gif)
 
 **Running our local server project**
 
@@ -65,7 +65,7 @@ app.listen(port, () => {
 Now all we have to do is let Loophole know the port our local server is running on! After authentication,follow the below instructions:
 
 
-![Authentication](https://media.giphy.com/media/9tZZ0SznwTWR0r0xUq/giphy.gif)
+![Tunnel](/img/blog/2020-10-29-get-started-with-loophole/8000.gif)
 
 
 :::tip Tip

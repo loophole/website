@@ -13,6 +13,7 @@ module.exports = {
   organizationName: "loophole",
   projectName: "website",
   themeConfig: {
+    sidebarCollapsible: false, // For now when we have small amount of documents
     navbar: {
       title: "",
       logo: {
