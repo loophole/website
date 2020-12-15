@@ -16,14 +16,16 @@ Loophole comes as a Command-line (CLI) tool and is cross-platform (Linux, Window
 ## Supported Functionalities
 
 1. Expose local HTTP server
-2. Expose HTTP server running on machine available locally
-3. Expose local directory
+1. Expose HTTP server running on any machine in your network
+1. Expose local directory via HTTPS
+1. Expose local directory via WebDav
+1. Basic Auth
 
 ## Supported Platforms
 
 1. Windows
-2. Linux
-3. Mac
+1. Linux
+1. Mac OS
 
 ## Regions
 
