@@ -3,13 +3,13 @@ slug: http
 title: http
 ---
 
+Expose http server on given port to the public
+
 :::caution
 Syntax for this command changed between [1.0.0-beta.8](https://github.com/loophole/cli/releases/tag/1.0.0-beta.8) and [1.0.0-beta.10](https://github.com/loophole/cli/releases/tag/1.0.0-beta.10)*
 
 \**(1.0.0-beta.9 is removed release)*
 :::
-
-Expose http server on given port to the public
 
 ### Synopsis
 

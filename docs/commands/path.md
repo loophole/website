@@ -3,11 +3,11 @@ slug: path
 title: path
 ---
 
+Expose given directory to the public
+
 :::note
 Introduced in [1.0.0-beta.10](https://github.com/loophole/cli/releases/tag/1.0.0-beta.10)
 :::
-
-Expose given directory to the public
 
 ### Synopsis
 

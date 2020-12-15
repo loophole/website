@@ -3,11 +3,11 @@ slug: webdav
 title: webdav
 ---
 
+Expose given directory to the public via WebDav
+
 :::note
 Introduced in [1.0.0-beta.11](https://github.com/loophole/cli/releases/tag/1.0.0-beta.11)
 :::
-
-Expose given directory to the public via WebDav
 
 ### Synopsis
 

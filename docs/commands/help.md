@@ -3,6 +3,8 @@ slug: help
 title: help
 ---
 
+Built-in `help` command
+
 ### Synopsis
 
 With help command, you can get an instant brief description on the command and the flags that can be used along.
