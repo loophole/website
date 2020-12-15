@@ -32,3 +32,11 @@
 img {
   border-radius: var(--ifm-global-radius);
 }
+
+.text--capitalize {
+  text-transform: capitalize;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}

@@ -126,7 +126,7 @@ const Home = () => {
               <div className="spacer spacer--sm"></div>
               <div>
                 <Link
-                  className={clsx("button button--secondary button--lg")}
+                  className={clsx("button button--secondary button--lg text--uppercase")}
                   to={useBaseUrl("/download")}
                 >
                   Quickstart for free
