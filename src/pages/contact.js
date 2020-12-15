@@ -1,23 +1,34 @@
 import React from "react";
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import Layout from "../components/common/layout/layout";
-import SEO from "../components/common/layout/seo";
-import Navigation from "../components/common/navigation/navigation";
+const Contact = () => {
+  const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
 
-import Header from "../components/contactus/header";
-import Features from "../components/contactus/features";
-import Footer from "../components/common/footer/footer";
-import GetStarted from "../components/common/footer/getstarted";
-
-const Contact = () => (
-  <Layout>
-    <SEO title="Contact" />
-    <Navigation isIndex={false} />
-    <Header />
-    <Features />
-    <GetStarted />
-    <Footer />
-  </Layout>
-);
+  return (
+    <Layout title="Contact" description={siteConfig.tagline}>
+      <header className="hero">
+        <div className="container">
+          <h1 className="hero__subtitle">Contact</h1>
+        </div>
+      </header>
+      <main>
+        <section>
+          <div className="container">
+            <p>
+              Whether you have a question about features, demo, or wish to help
+              us improve our services, our team is ready to answer all your
+              questions and listen to your feedback. Email us at{" "}
+              <a href="mailto:loophole@main.dev">loophole@main.dev</a>
+              &nbsp; and we would be happy to help!
+            </p>
+          </div>
+        </section>
+        <div className="spacer"></div>
+      </main>
+    </Layout>
+  );
+};
 
 export default Contact;

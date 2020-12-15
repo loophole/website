@@ -1,0 +1,72 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    flex: 1 1 auto;
+    width: 100%;
+
+    input {
+      border: 2px solid;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin: 0.25rem;
+      min-width: 125px;
+      width: 100%;
+      padding: 0.5rem;
+      transition: border-color 0.5s ease-out;
+    }
+    input:optional {
+      border-color: var(--ifm-color-secondary-light);
+    }
+    input:required:valid {
+      border-color: var(--ifm-color-success-light);
+    }
+    input:invalid {
+      border-color: var(--ifm-color-warning-light);
+    }
+    input:required:focus:valid {
+      background: 95% 50% var(--ifm-color-success-lightest);
+      background-size: 25px;
+    }
+    input:focus:invalid {
+      background: 95% 50% var(--ifm-color-warning-lightest);
+      background-size: 25px;
+    }
+  
+    textarea {
+      border: 2px solid;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin: 0.25rem;
+      min-width: 125px;
+      width: 100%;
+      padding: 0.5rem;
+      transition: border-color 0.5s ease-out;
+    }
+    textarea:optional {
+      border-color: var(--ifm-color-secondary-light);
+    }
+    textarea:required:valid {
+      border-color: var(--ifm-color-success-light);
+    }
+    textarea:invalid {
+      border-color: var(--ifm-color-warning-light);
+    }
+    textarea:required:focus:valid {
+      background: 95% 50% var(--ifm-color-success-lightest);
+      background-size: 25px;
+    }
+    textarea:focus:invalid {
+      background: 95% 50% var(--ifm-color-warning-lightest);
+      background-size: 25px;
+    }
+  }
+}
