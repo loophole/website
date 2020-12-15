@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://loophole.cloud/blog</id>
+    <title>Loophole Blog</title>
+    <updated>2020-10-29T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://loophole.cloud/blog"/>
+    <subtitle>Loophole Blog</subtitle>
+    <icon>https://loophole.cloud/img/icon.png</icon>
+    <rights>Copyright © 2020 Main Development GmbH. All rights reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Get Started with Loophole!]]></title>
+        <id>get-started-with-loophole</id>
+        <link href="https://loophole.cloud/blog/get-started-with-loophole"/>
+        <updated>2020-10-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Aspire to expose your localhost to the Internet with minimal effort? Do you wish to avoid going through the tedious deployment process? Let me introduce you to Loophole.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Expose yourself to the world!]]></title>
+        <id>expose-yourself-to-the-world</id>
+        <link href="https://loophole.cloud/blog/expose-yourself-to-the-world"/>
+        <updated>2020-10-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Local development environment makes the process fast and easy to test as you change your code continuously.]]></summary>
+    </entry>
+</feed>

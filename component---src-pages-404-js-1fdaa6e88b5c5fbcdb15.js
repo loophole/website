@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{w2l6:function(e,t,n){"use strict";n.r(t);var o=n("q1tI"),a=n.n(o),l=n("CyKR"),r=n("ohv3");t.default=function(){return a.a.createElement(l.a,null,a.a.createElement(r.a,{title:"404: Not found"}),a.a.createElement("h1",null,"NOT FOUND"),a.a.createElement("p",null,"Sorry, this page does not exist! Kindly go to"," ",a.a.createElement("a",{href:"https://www.loophole.cloud",target:"blank"},"Loophole"),"."," "))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-1fdaa6e88b5c5fbcdb15.js.map
