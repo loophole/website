@@ -1,18 +1,40 @@
 ---
 id: completion
-title: Completion
+title: completion
 ---
 
-With the help command, you can generate bash completion script, which will help you while using loophole.
+Generates bash completion scripts
 
-Simply add
+### Synopsis
+
+To load completion run
+
+```bash
+. <(loophole completion)
+```
+
+To configure your bash shell to load completions for each session add to your bashrc
+
+```bash
+# ~/.bashrc or ~/.profile
+. <(loophole completion)
 
 ```
-source <(loophole completion bash)
-```
 
-to your `~/.bashrc` file or execute command below:
+## Usage
 
 ```
-echo 'source <(loophole completion bash)' >> ~/.bashrc
+loophole completion [flags]
+```
+
+### Options
+
+```
+  -h, --help   help for completion
+```
+
+### Options inherited from parent commands
+
+```
+  -v, --verbose   verbose output
 ```

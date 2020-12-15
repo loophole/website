@@ -19,7 +19,6 @@ Example: Expose a directory from your local machine to the Internet.
 ```bash
 $ loophole dir ./my/local/path --hostname myhostname
 ```
-## Flags:
 
 ### Custom Subdomain Names
 
@@ -41,7 +40,7 @@ $ loophole dir ./my/local/path --hostname myhostname
 
 ### Verbose Mode
 
-Verbose mode flag helps you understand loophole in a greater context. IT provides the verbose output for the command used along.
+Verbose mode flag helps you understand loophole in a greater context. It provides the verbose output for the command used along.
 
 ```bash
 $ loophole http 8000 --verbose
@@ -52,3 +51,6 @@ $ loophole 8000 --verbose
 ```bash
 $ loophole dir ./my/local/path --verbose
 ```
+
+After starting the tunnel with the above command you'll start seeing some `DEBUG` level logs together with the default `INFO` entries.
+It may be useful in case something is not working and you want to share more details to the Loophole dev team.
