@@ -86,7 +86,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/loophole/website/edit/master/docs/",
+          editUrl: "https://github.com/loophole/website/edit/master/",
         },
         blog: {
           showReadingTime: true,
