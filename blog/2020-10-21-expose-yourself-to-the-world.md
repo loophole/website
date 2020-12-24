@@ -19,8 +19,8 @@ But in doing so, you might run into situations where you need to make it availab
 Did you ever wish to show your work to a client or colleague, or hoped for a secure, publicly available callback URL to interact with a web service. A complicated way includes uploading your application to a hosting platform like Heroku or AWS, but every time you update your code, you’d have to push those changes to your host server. Tedious and not a favorable approach, right?
 
 
-![Frustration](/img/blog/2020-10-21-expose-yourself-to-the-world/frustration.jpg)
-*source: [unsplash.com](https://unsplash.com)*
+![collaboration](\img\blog\undraw_real_time_collaboration_c62i.svg)
+*source: [undraw.co](https://undraw.co)*
 
 
 **Staying Agile**
