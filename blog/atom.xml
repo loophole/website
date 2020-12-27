@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://loophole.cloud/blog</id>
     <title>Loophole Blog</title>
-    <updated>2020-10-29T00:00:00.000Z</updated>
+    <updated>2020-12-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://loophole.cloud/blog"/>
     <subtitle>Loophole Blog</subtitle>
     <icon>https://loophole.cloud/img/icon.png</icon>
     <rights>Copyright © 2020 Main Development GmbH. All rights reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Share your files with ease!]]></title>
+        <id>share-your-files-with-ease</id>
+        <link href="https://loophole.cloud/blog/share-your-files-with-ease"/>
+        <updated>2020-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Developers often get caught in this problem: You have a huge file that you wish to transfer to your friend. The file is too big to be sent via email or instant messenger.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Choose your Custom Domains]]></title>
+        <id>choose-your-custom-domain</id>
+        <link href="https://loophole.cloud/blog/choose-your-custom-domain"/>
+        <updated>2020-12-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Web developers usually develop on localhost using their preferred tools and languages. They often utilize the local server to test the web apps. Have you come across a situation where you might need to showcase your work to a client or a colleague for feedback/progress? I am sure it wouldn't be worth the effort to deploy the web app after every tiny change on the site. Even worse, the time it takes to deploy these changes takes forever.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Get Started with Loophole!]]></title>
         <id>get-started-with-loophole</id>

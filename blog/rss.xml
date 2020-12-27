@@ -4,10 +4,24 @@
         <title>Loophole Blog</title>
         <link>https://loophole.cloud/blog</link>
         <description>Loophole Blog</description>
-        <lastBuildDate>Thu, 29 Oct 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Dec 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>Copyright © 2020 Main Development GmbH. All rights reserved.</copyright>
+        <item>
+            <title><![CDATA[Share your files with ease!]]></title>
+            <link>https://loophole.cloud/blog/share-your-files-with-ease</link>
+            <guid>share-your-files-with-ease</guid>
+            <pubDate>Tue, 22 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Developers often get caught in this problem: You have a huge file that you wish to transfer to your friend. The file is too big to be sent via email or instant messenger.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Choose your Custom Domains]]></title>
+            <link>https://loophole.cloud/blog/choose-your-custom-domain</link>
+            <guid>choose-your-custom-domain</guid>
+            <pubDate>Thu, 17 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Web developers usually develop on localhost using their preferred tools and languages. They often utilize the local server to test the web apps. Have you come across a situation where you might need to showcase your work to a client or a colleague for feedback/progress? I am sure it wouldn't be worth the effort to deploy the web app after every tiny change on the site. Even worse, the time it takes to deploy these changes takes forever.]]></description>
+        </item>
         <item>
             <title><![CDATA[Get Started with Loophole!]]></title>
             <link>https://loophole.cloud/blog/get-started-with-loophole</link>

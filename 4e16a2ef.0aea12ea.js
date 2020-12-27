@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{85:function(o){o.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"qrcode","name":"qrcode","count":1,"permalink":"/blog/tags/qrcode"}')}}]);

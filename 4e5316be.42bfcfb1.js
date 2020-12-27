@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{86:function(n){n.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"instant-hosting","name":"instant hosting","count":1,"permalink":"/blog/tags/instant-hosting"}')}}]);
