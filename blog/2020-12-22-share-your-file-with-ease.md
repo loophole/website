@@ -20,7 +20,7 @@ Instead of going through that hassle, you can save time by transferring files (b
 
 **But wait, I have something more!** If you want to share multiple files with any number of users, you can add them to the specified folder location while your buddies can browse through that section of your PC. Sharing files can be a whole lot simpler and quicker with this method. All you have to do is drag and drop, and let them know they can now download the file(s).
 
-![filesharing](\img\blog\2020\undraw_upload_87y9.svg)
+![filesharing](/img/blog/2020/undraw_upload_87y9.svg)
 *source: [undraw.co](https://undraw.co)*
 
 ## Setting up Loophole
