@@ -27,7 +27,7 @@ Instead of going through that hassle, you can save time by transferring files (b
 
 ### Download
 
-We begin with setting up a loophole tunnel in Windows. [You can download the file here](/downloads). For Mac and Linux users, the process shouldn't be much different. Choose the relevant download option. 
+We begin with setting up a loophole tunnel in Windows. [You can download the file here](/download). For Mac and Linux users, the process shouldn't be much different. Choose the relevant download option. 
 
 Once downloaded, open the command prompt and go to the location where loophole.exe is stored *(often in the download folder)*.
 
