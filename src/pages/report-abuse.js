@@ -72,7 +72,6 @@ const ReportAbuse = () => {
           mail,
         }
       );
-      console.log(response);
       resetToInitialState();
       setReportSendingSuccess(true);
       setReportSendingFailure(false);

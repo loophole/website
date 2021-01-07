@@ -6,7 +6,7 @@ author: Aman Kalra
 author_title: Loophole Core Team
 author_url: https://github.com/amankalra172
 author_image_url: https://avatars2.githubusercontent.com/u/49478659?v=4
-tags: [File Sharing, Instant Hosting, tunnel ]
+tags: [tunnel, hosting, file sharing, cli]
 ---
 
 Developers often get caught in this problem: You have a huge file that you wish to transfer to your friend. The file is too big to be sent via email or instant messenger. 

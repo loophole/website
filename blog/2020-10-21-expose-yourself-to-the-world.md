@@ -6,7 +6,7 @@ author: Aman Kalra
 author_title: Loophole Core Team
 author_url: https://github.com/amankalra172
 author_image_url: https://avatars2.githubusercontent.com/u/49478659?v=4
-tags: [quickstart, tunnel]
+tags: [quickstart, tunnel, hosting, cli]
 ---
 
 Local development environment makes the process fast and easy to test as you change your code continuously. 
