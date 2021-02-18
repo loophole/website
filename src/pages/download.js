@@ -26,28 +26,56 @@ const Download = () => {
       } catch (e) {
         setLoading(false);
         setError(true);
-        console.log(e);
       }
     }
     getRelease();
   }, []);
   const { siteConfig = {} } = context;
 
-  const windowsAssets =
+  const windowsCliAssets =
     !loading && !error
-      ? release.data.assets.filter((a) => a.name.includes("windows"))
+      ? release.data.assets.filter(
+          (a) => a.name.includes("loophole-cli") && a.name.includes("windows")
+        )
       : [];
-  const linuxAssets =
+  const windowsDesktopAssets =
     !loading && !error
-      ? release.data.assets.filter((a) => a.name.includes("linux"))
+      ? release.data.assets.filter(
+          (a) =>
+            a.name.includes("loophole-desktop") && a.name.includes("windows")
+        )
       : [];
-  const macAssets =
+  const linuxCliAssets =
     !loading && !error
-      ? release.data.assets.filter((a) => a.name.includes("darwin"))
+      ? release.data.assets.filter(
+          (a) => a.name.includes("loophole-cli") && a.name.includes("linux")
+        )
+      : [];
+  const linuxDesktopAssets =
+    !loading && !error
+      ? release.data.assets.filter(
+          (a) => a.name.includes("loophole-desktop") && a.name.includes("linux")
+        )
+      : [];
+  const macCliAssets =
+    !loading && !error
+      ? release.data.assets.filter(
+          (a) => a.name.includes("loophole-cli") && a.name.includes("macos")
+        )
+      : [];
+  const macDesktopAssets =
+    !loading && !error
+      ? release.data.assets.filter(
+          (a) => a.name.includes("loophole-desktop") && a.name.includes("macos")
+        )
       : [];
 
-  const emptyAssets =
-    !windowsAssets.length || !linuxAssets.length || !macAssets.length;
+  const emptyCliAssets =
+    !windowsCliAssets.length || !linuxCliAssets.length || !macCliAssets.length;
+  const emptyDesktopAssets =
+    !windowsDesktopAssets.length ||
+    !linuxDesktopAssets.length ||
+    !macDesktopAssets.length;
 
   return (
     <Layout title="Download" description={siteConfig.tagline}>
@@ -59,16 +87,28 @@ const Download = () => {
       <main>
         <section>
           <div className="container">
+            Please download the latest version of Loophole for your Operating
+            System and Architecture.
+          </div>
+        </section>
+        <div className="spacer"></div>
+        <section>
+          <div className="container">
+            <div className="content">
+              <h1 className="title is-3">CLI</h1>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
             <div>
-              Please download the latest version of Loophole for your Operating
-              System and Architecture.
-              {loading || error || emptyAssets ? (
+              {loading || error || emptyCliAssets ? (
                 <div className="row">
                   <div className={clsx("col col--12", styles.downloadList)}>
                     {loading ? (
                       <h5>Loading possible download options...</h5>
                     ) : null}
-                    {!loading && (error || emptyAssets) ? (
+                    {!loading && (error || emptyCliAssets) ? (
                       <h5>
                         Please head to{" "}
                         <a
@@ -89,7 +129,7 @@ const Download = () => {
                     <div>Windows</div>
                     <div>
                       <ul>
-                        {windowsAssets
+                        {windowsCliAssets
                           .map((a) => (
                             <li key={a.id}>
                               <a
@@ -101,8 +141,10 @@ const Download = () => {
                                   .split("_")
                                   .pop()
                                   .split(".")[0]
-                                  .replace("i386", "Windows (32-bit)")
-                                  .replace("amd64", "Windows (64-bit)")}
+                                  .replace("32bit", "Windows (32bit)")
+                                  .replace("64bit", "Windows (64bit)")
+                                  .replace("i386", "Windows (32bit)")
+                                  .replace("amd64", "Windows (64bit)")}
                               </a>
                             </li>
                           ))
@@ -114,7 +156,7 @@ const Download = () => {
                     <div>Linux</div>
                     <div>
                       <ul>
-                        {linuxAssets
+                        {linuxCliAssets
                           .map((a) => (
                             <li key={a.id}>
                               <a
@@ -126,10 +168,13 @@ const Download = () => {
                                   .split("_")
                                   .pop()
                                   .split(".")[0]
-                                  .replace("i386", "Linux (i386)")
-                                  .replace("amd64", "Linux (amd64)")
+                                  .replace("32bit", "Linux (32-bit)")
+                                  .replace("i386", "Linux (32-bit)")
+                                  .replace("64bit", "Linux (64-bit)")
+                                  .replace("amd64", "Linux (64-bit)")
                                   .replace("arm64", "Linux (arm64)")
-                                  .replace("armv6", "Linux (armv6)")}
+                                  .replace("armv6", "Linux (armv6)")
+                                  .replace("armv7", "Linux (armv7)")}
                               </a>
                             </li>
                           ))
@@ -141,7 +186,7 @@ const Download = () => {
                     <div>Mac OS</div>
                     <div>
                       <ul>
-                        {macAssets
+                        {macCliAssets
                           .map((a) => (
                             <li key={a.id}>
                               <a
@@ -153,7 +198,8 @@ const Download = () => {
                                   .split("_")
                                   .pop()
                                   .split(".")[0]
-                                  .replace("amd64", "Mac OS (amd64)")}
+                                  .replace("64bit", "Mac OS (64-bit)")
+                                  .replace("amd64", "Mac OS (64-bit)")}
                               </a>
                             </li>
                           ))
@@ -173,9 +219,10 @@ const Download = () => {
               On Linux or OSX you can unzip loophole from a terminal with the
               following command:
               <pre>
-                <code>$ unzip /path/to/loophole.zip </code>
+                <code>$ unzip /path/to/loophole-cli-&lt;version&gt;.zip </code>
               </pre>
-              On Windows, just double click <em>loophole.zip</em>.
+              On Windows, just double click{" "}
+              <em>loophole-cli-&lt;version&gt;.zip</em>.
             </p>
           </div>
         </section>
@@ -207,6 +254,160 @@ const Download = () => {
                   # or for 1.0.0-beta.8 and older
                   <br />$ loophole 3000
                 </code>
+              </pre>
+              Read the <Link to={useBaseUrl("/docs")}>documentation</Link> to
+              get more ideas on how to use Loophole.
+            </p>
+          </div>
+        </section>
+        <div className="spacer"></div>
+        <section>
+          <div className="container">
+            <div className="content">
+              <h1 className="title is-3">Desktop</h1>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <div>
+              Please download the latest version of Loophole for your Operating
+              System and Architecture.
+              {loading || error || emptyDesktopAssets ? (
+                <div className="row">
+                  <div className={clsx("col col--12", styles.downloadList)}>
+                    {loading ? (
+                      <h5>Loading possible download options...</h5>
+                    ) : null}
+                    {!loading && (error || emptyDesktopAssets) ? (
+                      <h5>
+                        Please head to{" "}
+                        <a
+                          href="https://github.com/loophole/cli/releases/latest"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub
+                        </a>{" "}
+                        to get newest release.
+                      </h5>
+                    ) : null}
+                  </div>
+                </div>
+              ) : (
+                <div className="row">
+                  <div className={clsx("col col--4", styles.downloadList)}>
+                    <div>Windows</div>
+                    <div>
+                      <ul>
+                        {windowsDesktopAssets
+                          .map((a) => (
+                            <li key={a.id}>
+                              <a
+                                href={a.browser_download_url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {a.name
+                                  .split("_")
+                                  .pop()
+                                  .split(".")[0]
+                                  .replace("32bit", "Windows (32bit)")
+                                  .replace("64bit", "Windows (64bit)")
+                                  .replace("i386", "Windows (32bit)")
+                                  .replace("amd64", "Windows (64bit)")}
+                              </a>
+                            </li>
+                          ))
+                          .sort((a) => a.id)}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={clsx("col col--4", styles.downloadList)}>
+                    <div>Linux</div>
+                    <div>
+                      <ul>
+                        {linuxDesktopAssets
+                          .map((a) => (
+                            <li key={a.id}>
+                              <a
+                                href={a.browser_download_url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {a.name
+                                  .split("_")
+                                  .pop()
+                                  .split(".")[0]
+                                  .replace("32bit", "Linux (32-bit)")
+                                  .replace("i386", "Linux (32-bit)")
+                                  .replace("64bit", "Linux (64-bit)")
+                                  .replace("amd64", "Linux (64-bit)")
+                                  .replace("arm64", "Linux (arm64)")
+                                  .replace("armv6", "Linux (armv6)")
+                                  .replace("armv7", "Linux (armv7)")}
+                              </a>
+                            </li>
+                          ))
+                          .sort((a) => a.id)}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={clsx("col col--4", styles.downloadList)}>
+                    <div>Mac OS</div>
+                    <div>
+                      <ul>
+                        {macDesktopAssets
+                          .map((a) => (
+                            <li key={a.id}>
+                              <a
+                                href={a.browser_download_url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {a.name
+                                  .split("_")
+                                  .pop()
+                                  .split(".")[0]
+                                  .replace("64bit", "Mac OS (64-bit)")
+                                  .replace("amd64", "Mac OS (64-bit)")}
+                              </a>
+                            </li>
+                          ))
+                          .sort((a) => a.id)}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h4>Unpack</h4>
+            <p>
+              On Linux or OSX you can unzip loophole from a terminal with the
+              following command:
+              <pre>
+                <code>
+                  $ unzip /path/to/loophole-desktop-&lt;version&gt;.zip{" "}
+                </code>
+              </pre>
+              On Windows, just double click{" "}
+              <em>loophole-desktop-&lt;version&gt;.zip</em>.
+            </p>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h4>Run it</h4>
+            <p>
+              Simply <strong>doubleclick</strong> on it or run from terminal:
+            </p>
+            <p>
+              <pre>
+                <code>$ loophole-desktop</code>
               </pre>
               Read the <Link to={useBaseUrl("/docs")}>documentation</Link> to
               get more ideas on how to use Loophole.

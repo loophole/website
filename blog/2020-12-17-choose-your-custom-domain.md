@@ -6,7 +6,7 @@ author: Aman Kalra
 author_title: Loophole Core Team
 author_url: https://github.com/amankalra172
 author_image_url: https://avatars2.githubusercontent.com/u/49478659?v=4
-tags: [tunnel, custom domain, qrcode, webapp]
+tags: [tunnel, hosting, custom domain, qrcode, webapp]
 ---
 
 Web developers usually develop on localhost using their preferred tools and languages. They often utilize the local server to test the web apps. Have you come across a situation where you might need to showcase your work to a client or a colleague for feedback/progress? I am sure it wouldn't be worth the effort to deploy the web app after every tiny change on the site. Even worse, the time it takes to deploy these changes takes forever. 
