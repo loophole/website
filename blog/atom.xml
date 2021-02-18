@@ -2,12 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://loophole.cloud/blog</id>
     <title>Loophole Blog</title>
-    <updated>2020-12-22T00:00:00.000Z</updated>
+    <updated>2021-02-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://loophole.cloud/blog"/>
     <subtitle>Loophole Blog</subtitle>
     <icon>https://loophole.cloud/img/icon.png</icon>
-    <rights>Copyright © 2020 Main Development GmbH. All rights reserved.</rights>
+    <rights>Copyright © 2021 Main Development GmbH. All rights reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Announcing Loophole Desktop]]></title>
+        <id>announcing-loophole-desktop</id>
+        <link href="https://loophole.cloud/blog/announcing-loophole-desktop"/>
+        <updated>2021-02-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Some people, especially Windows users, are used to running graphical applications. Here it is! We bring you the brand new desktop client for loophole!]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Share your files with ease!]]></title>
         <id>share-your-files-with-ease</id>
