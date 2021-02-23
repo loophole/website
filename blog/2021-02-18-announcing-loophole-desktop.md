@@ -9,16 +9,91 @@ author_image_url: https://avatars3.githubusercontent.com/u/11832884?s=460&v=4
 tags: [tunnel, hosting, desktop, gui]
 ---
 
-Some people, especially Windows users, are used to running graphical applications. Here it is! We bring you the brand new desktop client for `loophole`!
+Loophole is a reverse proxy that enables you to expose your localhost to the internet. Some developers, especially Windows users, like running graphical applications. 
+
+
+
 
 <!-- truncate -->
 
-I'm happy to announce that we recently released the very first version of our `Loophole Desktop` client.
-The Desktop Client brings all the features available in the CLI in more user-friendly form.
+
+![Login](https://media.giphy.com/media/h1uchvpmq4h3NiBhG1/giphy.gif)
+
+**We have heard you!** 
+
+*** Introducing `Loophole Desktop`, a simple and powerful GUI application to run developer-friendly tunnels. Loophole is making reaching the world easy and safe. ***
+
+
+The new dashboard hosts all the features available in the CLI in a more user-friendly form. Let’s get started in exploring basic features and getting acquainted with the usage.
+
+First, go to the [Download](/download) page and navigate to the `Desktop` section. Now choose your operating system and the auto-download should begin.
 
 :::note
-It's available starting from version 1.0.0-beta.13.
+Currently, it is available starting from version 1.0.0-beta.13!
+:::
+### Getting  Started
+
+On Linux or OSX you can unzip Loophole from a terminal with the following command:
+
+ 
+```bash
+$ unzip /path/to/loophole-desktop-<version>.zip
+```
+
+On Windows, just double click `loophole-desktop-<version>.zip` .
+
+
+### Run EXE
+
+Simply double click on it or run from the terminal:
+
+ 
+```bash
+$ loophole-desktop
+```
+
+### Login Page
+
+Loophole was built with privacy and security in mind. Before we have a look at the features, let’s log in. Click on Login button and follow the instructions on the screen.
+
+![Login](/img/blog/GUI/login_gui.jpg)
+
+
+:::tip
+If you have logged in  the past and the token expired, click **Restart the process** under the Login section.
 :::
 
-To get it, simply go to [download](/download) page and choose the correct link for your operating system in section called `Desktop`.
+### Tunnel startup
 
+Starting a tunnel has never been so easy. Simply, click the + button and fill in the host name, port, and click submit. You can alternatievly click on `Create` from the side bar menu.
+
+![tunnel](/img/blog/GUI/loophole_gui_1.gif)
+
+###  Customise your Tunnel
+
+Loophole lets you choose from the three options to customize your tunnel services.
+
+a. Choose your custom hostname as:
+ 
+ `<custom hostname>.loophole.site`
+
+b. Enable basic authentication to prohibit unauthorized access to your web app.
+
+c. Disable the loophole proxy page to view the regular 502 error page.
+
+![custom](/img/blog/GUI/loophole_gui_2.gif)
+
+:::tip
+Find all your active tunnels by clicking **List** from your side menu!
+:::
+
+
+### Dashboard Features
+
+Other services offered by Loophole GUI include 
+
+a. Sharing your directory with another user.
+
+b. Webdav application.
+
+To know more about these services, visit our [Blogs](/blogs)!
