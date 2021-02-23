@@ -96,4 +96,4 @@ a. Sharing your directory with another user.
 
 b. Webdav application.
 
-To know more about these services, visit our [Blogs](/blogs)!
+To know more about these services, visit our [Blogs](/blog)!
