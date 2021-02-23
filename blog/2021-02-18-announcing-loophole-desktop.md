@@ -60,7 +60,7 @@ Loophole was built with privacy and security in mind. Before we have a look at t
 
 
 :::tip
-If you have logged in  the past and the token expired, click **Restart the process** under the Login section.
+If you face issues with Login, click **Restart the process** under the Login section. If the problem still persist, email at loophole@main.dev.
 :::
 
 ### Tunnel startup
