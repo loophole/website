@@ -31,13 +31,13 @@ const PrivacyPolicy = () => {
               the circumstances described within this Privacy Policy would we
               share your information with any third party. Our use of personal
               data is in accordance with the General Data Protection Regulations
-              (GDPR).
+              (GDPR). 
             </p>
             <h4>Identity of the controller</h4>
             <p>
               Main Development GmbH
               <br />
-              Otto-von-Guericke-Straße 86a, 39104 Magdeburg
+              Olvensteder Straße 11A, 39108 Magdeburg
             </p>
             <h4>Data Access at our Site</h4>
             <h5>Personal data</h5>
