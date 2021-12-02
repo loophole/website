@@ -13,7 +13,6 @@ module.exports = {
   organizationName: "loophole",
   projectName: "website",
   themeConfig: {
-    sidebarCollapsible: false, // For now when we have small amount of documents
     navbar: {
       title: "",
       logo: {
@@ -85,6 +84,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          sidebarCollapsible: false, // For now when we have small amount of documents
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/loophole/website/edit/master/",
         },

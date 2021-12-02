@@ -12,14 +12,15 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.69",
-    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.69",
-    "@docusaurus/preset-classic": "2.0.0-alpha.69",
+    "@docusaurus/core": "2.0.0-beta.9",
+    "@docusaurus/plugin-ideal-image": "2.0.0-beta.9",
+    "@docusaurus/preset-classic": "2.0.0-beta.9",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
-    "docusaurus-plugin-sass": "^0.1.11",
+    "docusaurus-plugin-sass": "^0.2.1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "sass": "^1.44.0"
   },
   "browserslist": {
     "production": [
