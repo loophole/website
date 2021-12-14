@@ -92,20 +92,50 @@ const TermsAndConditions = () => {
             </p>
             <h4>Acceptable Use</h4>
             <p>
-              You agree that any of the below activities are considered
-              prohibited usage and will result in immediate account suspension
-              or cancellation without a refund and the possibility that Loophole
-              will impose fees; and/or pursue civil remedies without providing
-              advance notice. We may terminate or suspend your account and bar
-              access to the Service immediately, without prior notice or
-              liability, under our sole discretion, for any reason whatsoever
-              and without limitation, including but not limited to a breach of
-              the Terms. If you wish to terminate your account, you may simply
-              discontinue using the Service. All provisions of the Terms which
-              by their nature should survive termination shall survive
-              termination, including, without limitation, ownership provisions,
-              warranty disclaimers, indemnity and limitations of liability.
+            You agree that, except as expressly provided in these Terms, you will not: (i) copy the 
+            Loophole Services or Site Materials or any portion thereof; (ii) distribute, modify, 
+            adapt, translate, reverse engineer, decompile, disassemble, create derivative works 
+            based on, print any part of, or otherwise attempt to discover the source code, compiled
+             executables, intermediate files, or underlying structure, ideas, know-how or algorithms 
+             relating in any way to the Loophole Services or Site Materials; (iii) rent, transfer, 
+             resell, lease, license, assign, grant any rights in, or otherwise make available the 
+             Loophole Services or Site Materials to third parties or offer it on a standalone basis; 
+             (iv) use the Loophole Services or Site Materials in a fashion that could reasonably be 
+             deemed to compete with the business of Loophole; (v) use the Loophole Services or 
+             Site Materials to send or store infringing, obscene, threatening, libelous, or 
+             otherwise unlawful material, including material that violates third party rights; 
+             (vi) use the Loophole Services or Site Materials to conduct “phishing” or other 
+             similar activities or in any other manner that could be misleading to third parties; 
+             (vii) use the Loophole Services or Site Materials to create, use, send, store, or run 
+             material containing software viruses, worms, Trojan horses or otherwise engage in any 
+             malicious act or disrupt the security, integrity or operation of the Loophole Services 
+             or Site Materials; (viii) use the Loophole Services or Site Materials in any manner that 
+             violates any applicable foreign, federal, state or local law, rule or regulation; or (ix) 
+             use the Loophole Services or Site Materials in any manner that violates any third party 
+             rights or this Agreement.
+
             </p>
+            <h4>Term and Termination</h4>
+            <p>
+            We may terminate or suspend access to the Services immediately, without prior notice 
+            or liability (other than refunding pre-paid fees to the extent we terminate based on no
+            action or omission on your part), for any reason whatsoever, including, but not limited
+            to, if you breach any of the Terms. All provisions of the Terms which, by their nature,
+            should survive termination shall survive termination, including, without limitation, 
+            ownership provisions, warranty disclaimers, indemnifications and limitations of liability.
+            </p>
+
+
+            <h4>Donations</h4>
+            <p>
+            You may become a donor (“Donor”) by pledging a donation to Loophole by using the donation tool 
+            on our Website. You acknowledge and agree that you are under no obligation to become a Donor 
+            or to pledge a donation and that you will be solely responsible for any decision to become 
+            a Donor. You understand that your contribution is being made to Loophole and that Loophole has exclusive 
+            legal control over all donations. In the event that you make a donation pledge, you will be 
+            required to provide truthful, accurate, valid, and current credit card or other payment 
+            information at the time of the pledge. You agree that all donations are final.
+            </p> 
             <h4>Fees and Payment</h4>
             <p>
               Some Services are provided on a fee basis. You agree to pay

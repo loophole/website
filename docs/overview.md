@@ -11,7 +11,7 @@ slug: /
 
 ## Download
 
-Loophole comes as a Command-line (CLI) tool and is cross-platform (Linux, Windows, macOS). To get the suitable binary for your machine go to [download](/download).
+Loophole is now available in GUI and Command-line (CLI) interface for Linux, Windows & macOS. To get the suitable binary for your machine go to [download](/download).
 
 ## Supported Functionalities
 

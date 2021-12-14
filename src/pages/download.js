@@ -87,8 +87,7 @@ const Download = () => {
       <main>
         <section>
           <div className="container">
-            Please download the latest version of Loophole for your Operating
-            System and Architecture.
+           Loophole has two options, command line (CLI) or Graphical User Interface (Desktop), choose whatever suits you the best!
           </div>
         </section>
         <div className="spacer"></div>
