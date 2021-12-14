@@ -37,6 +37,11 @@ module.exports = {
           label: "Blog",
           position: "left",
         },
+        {
+          to: "/docs/faq",
+          label: "FAQ",
+          position: "left",
+        },
       ],
     },
     footer: {
@@ -73,6 +78,23 @@ module.exports = {
             {
               label: "Twitter",
               href: "https://twitter.com/loophole_cloud",
+            },
+            {
+              label: "Product hunt",
+              href: "https://www.producthunt.com/posts/loophole",
+            },
+          ],
+        },
+        {
+          title: "Sponsor Us!",
+          items: [
+            {
+              label: "Why Donate?",
+              href: "https://github.com/loophole/cli/discussions",
+            },
+            {
+              label: "Buy me a Coffee",
+              href: "https://www.buymeacoffee.com/loophole",
             },
           ],
         },
