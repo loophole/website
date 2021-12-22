@@ -89,7 +89,7 @@ module.exports = {
           items: [
             {
               label: "Why Donate?",
-              href: "https://github.com/loophole/cli/discussions",
+              href: "/blog/the-next-big-thing",
             },
             {
               label: "Buy me a Coffee",
