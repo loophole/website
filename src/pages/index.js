@@ -172,9 +172,11 @@ const Social = ({ imageUrl, username, text }) => {
 
 const Number = ({ value, type }) => {
   return (
-    <div className={clsx("col col--4", styles.numberBox)}>
-      <h1 className="text--center">{value}</h1>
-      <p className="text--center">{type}</p>
+    <div className={clsx("col col--4")}>
+      <div className={clsx(styles.numberBox)}>
+        <h1 className="text--center">{value}</h1>
+        <p className="text--center">{type}</p>
+      </div>
     </div>
   );
 };
@@ -222,7 +224,7 @@ const Home = () => {
               </div>
               <div className="row">
                 {number.map((props, idx) => (
-                 <div> <Number key={idx} {...props} /> </div>
+                 <Number key={idx} {...props} />
                 ))}
               </div>
             </div>
