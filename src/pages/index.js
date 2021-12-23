@@ -20,8 +20,8 @@ const usecases = [
     imageUrl: "img/undraw_mobile_testing_reah.svg",
   },
   {
-    title: "Building peers to peer apps",
-    imageUrl: "img/undraw_code_typing_7jnv.svg",
+    title: "Share files instantly",
+    imageUrl: "img/undraw_upload_re_pasx.svg",
   },
   {
     title: "Running personal cloud servers from home",
@@ -32,6 +32,51 @@ const usecases = [
     imageUrl: "img/undraw_smart_home_28oy.svg",
   },
 ];
+
+
+const number = [
+  {
+    type: "Number of Tunnels Created.",
+    value: "15000+",
+  },
+  {
+    type: "Number of Signups.",
+    value: "700+",
+
+  },
+  {
+    type: "Countries trust us!",
+    value: "90+",
+  },
+];
+  
+
+const social = [
+  {
+    username:"@cloudy_stuey",
+    text: "@loophole_cloud is an alternative to @ngrok_- its great to see the innovation in such tools which help developers",
+    imageUrl: "img/cloudy_stuey.jpg",
+  },
+  {
+    username:"@Brodie_Friesen",
+    text: "@loophole_cloud and @SimpleMachines is an amazing combo for small self-hosted servers and development! I highly recommend both.",
+    imageUrl: "img/Brodie_Friesen.jpg",
+  },
+  {
+    username:"@james_a_rob",
+    text: "Integrated @loophole_cloud into a productivity tool i'm working on. Real simple to add custom domains for free.",
+    imageUrl: "img/james_a_rob.jpg",
+  },
+  {
+    username:"@msanaullahsahar",
+    text: "We really love this feature. Thanks for providing this wonderful service.",
+    imageUrl: "img/msanaullahsahar.jpg",
+  },
+  
+
+];
+
+
 
 const features = [
   {
@@ -110,6 +155,32 @@ const Feature = ({ title, description }) => {
   );
 };
 
+const Social = ({ imageUrl, username, text }) => {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={clsx(styles.socialBox, "col")}>
+      {imgUrl && (
+        <div className="text--left">
+          <img src={imgUrl} alt={username} />
+        </div>
+      )}
+      <h4 className="text--left">{username}</h4>
+      <p className="text--left">{text}</p>
+    </div>
+  );
+};
+
+const Number = ({ value, type }) => {
+  return (
+    <div className={clsx("col col--4")}>
+      <div className={clsx(styles.numberBox)}>
+        <h1 className="text--center">{value}</h1>
+        <p className="text--center">{type}</p>
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
@@ -144,6 +215,21 @@ const Home = () => {
         </div>
       </header>
       <main>
+      <div className="spacer--lg"></div>
+        {number && number.length > 0 && (
+          <section>
+            <div className="container">
+              <div className="text--center">
+                <h2>Believing in our mission.</h2>
+              </div>
+              <div className="row">
+                {number.map((props, idx) => (
+                 <Number key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         <div className="spacer"></div>
         {usecases && usecases.length > 0 && (
           <section>
@@ -176,7 +262,21 @@ const Home = () => {
             </div>
           </section>
         )}
-        <div className="spacer"></div>
+        <div className="spacer --lg"></div>
+        {social && social.length > 0 && (
+          <section>
+            <div className="container">
+              <div className="text--center">
+                <h2>What other developers have to say!</h2>
+              </div>
+              <div className="row">
+                {social.map((props, idx) => (
+                  <Social key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </main>
     </Layout>
   );
