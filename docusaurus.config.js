@@ -13,7 +13,6 @@ module.exports = {
   organizationName: "loophole",
   projectName: "website",
   themeConfig: {
-    sidebarCollapsible: false, // For now when we have small amount of documents
     navbar: {
       title: "",
       logo: {
@@ -107,6 +106,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          sidebarCollapsible: false, // For now when we have small amount of documents
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/loophole/website/edit/master/",
         },
@@ -124,7 +124,6 @@ module.exports = {
           customCss: require.resolve("./src/css/custom.scss"),
         },
         sitemap: {
-          cacheTime: 600 * 1000, // 600 sec - cache purge period
           changefreq: "weekly",
           priority: 0.5,
           trailingSlash: false,
