@@ -13,6 +13,7 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@docusaurus/core": "2.0.0-beta.9",
     "@docusaurus/plugin-ideal-image": "2.0.0-beta.9",
     "@docusaurus/preset-classic": "2.0.0-beta.9",
@@ -28,6 +29,15 @@
     "docusaurus-plugin-sass": "^0.2.1",
     "node-sass": "^6.0.1",
 >>>>>>> 75406bf... updation of donatin
+=======
+    "@docusaurus/core": "^2.0.0-beta.ff31de0ff",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-beta.ff31de0ff",
+    "@docusaurus/preset-classic": "^2.0.0-beta.ff31de0ff",
+    "@mdx-js/react": "^1.6.21",
+    "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.2.1",
+    "node-sass": "^6.0.1",
+>>>>>>> 56d8e83f8f4d86cce5fe44eff9e77e195ccf4423
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "sass": "^1.44.0"
