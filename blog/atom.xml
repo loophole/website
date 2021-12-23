@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://loophole.cloud/blog</id>
     <title>Loophole Blog</title>
-    <updated>2021-02-18T00:00:00.000Z</updated>
+    <updated>2021-12-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://loophole.cloud/blog"/>
     <subtitle>Loophole Blog</subtitle>
     <icon>https://loophole.cloud/img/icon.png</icon>
     <rights>Copyright © 2021 Main Development GmbH. All rights reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[The Next Big Thing!]]></title>
+        <id>the-next-big-thing</id>
+        <link href="https://loophole.cloud/blog/the-next-big-thing"/>
+        <updated>2021-12-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As we continue to improve Loophole and aim to migrate from the current beta version to a more stable version, we have been thrilled with the response received from users all over the world in the past couple of months.]]></summary>
+        <content type="html"><![CDATA[<p>As we continue to improve Loophole and aim to migrate from the current beta version to a more stable version, we have been thrilled with the response received from users all over the world in the past couple of months. </p><p>Loophole was initially created as a hobby project during our Friday office happy hours before it was launched for the public. Today it has both CLI and GUI-based interfaces with over <strong>15000 tunnels</strong> launched by <strong>700 users</strong>  from over <strong>91 countries</strong> in the world. These numbers set a foundation for our product and its use case. It not only uplifts every team member’s confidence that has worked numerous hours in building Loophole but also makes us realize the true potential of Loophole in a developer’s toolkit. </p><img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" width="650" height="350"/><h3>The road ahead.</h3><p>Loophole has gone through tremendous changes since its launch with the help and feedback from users like you. Users have made it possible for us to finally move toward a stable version. The Loophole team believes in giving back to society. Rather than setting up a subscription-based model, we have decided to keep Loophole available for public use at no cost.We do not plan to charge users any fee for using our services. There are no hidden charges, nothing! You can continue to use Loophole as you did in the past. All our features including, custom domain names, long tunnel active times, and directory shares remain free and open to use.  You may ask, what’s the catch? Well, we do need some financial support to run our infrastructure. To cover up the expenses, we plan to ask for donations. These donations would help us maintain our infrastructures and additional expenses to upgrade and improve the overall tool. Visit us on <a href="https://www.buymeacoffee.com/loophole">buy me a coffee</a> to support!</p><p>Lastly, let us tell you more about what is in the future. We plan to launch new features including anonymous signups, and security advancements against abuse use in upcoming weeks. The Loophole team takes privacy very seriously. Our roadmap consists of a major upgrade that will let users migrate to a self-hosted authentication platform in the upcoming months. This will further strengthen and secure our platform and reduce the reliability of third-party services. </p><p>We appreciate your trust in Loophole. We would love to hear from you. Your support will keep us motivated to keep building Loophole. If you want to request a special feature or wish to share your feedback about Loophole, feel free to fill the form  or email us at <a href="mailto:loophole@main.dev.">loophole@main.dev.</a> </p><p>To support our development, don&#x27;t forget to <a href="https://www.buymeacoffee.com/loophole">buy us a coffee or a cookie</a>. We are also open for some beers. Cheers!</p>]]></content>
+        <author>
+            <name>Aman Kalra</name>
+            <uri>https://github.com/amankalra172</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Announcing Loophole Desktop]]></title>
         <id>announcing-loophole-desktop</id>
