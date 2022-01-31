@@ -188,7 +188,7 @@ const Home = () => {
                   The revocation of certificates from Let's Encrypt can cause
                   your Loophole site to not work as expected. The simplest
                   workaround is to delete everything in the{" "}
-                  <code>~/.loophole/certs</code> folder and restart thr tunnel.
+                  <code>~/.loophole/certs</code> folder and restart the tunnel.
                   Loophole will be able to fetch new certificate.
                 </p>
                 <p>
