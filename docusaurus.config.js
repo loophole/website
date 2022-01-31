@@ -12,6 +12,7 @@ module.exports = {
   favicon: "img/icon.png",
   organizationName: "loophole",
   projectName: "website",
+  trailingSlash: false,
   themeConfig: {
     navbar: {
       title: "",
@@ -126,7 +127,6 @@ module.exports = {
         sitemap: {
           changefreq: "weekly",
           priority: 0.5,
-          trailingSlash: false,
         },
       },
     ],
