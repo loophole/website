@@ -33,7 +33,6 @@ const usecases = [
   },
 ];
 
-
 const number = [
   {
     type: "Number of Tunnels Created.",
@@ -42,41 +41,35 @@ const number = [
   {
     type: "Number of Signups.",
     value: "700+",
-
   },
   {
     type: "Countries trust us!",
     value: "90+",
   },
 ];
-  
 
 const social = [
   {
-    username:"@cloudy_stuey",
+    username: "@cloudy_stuey",
     text: "@loophole_cloud is an alternative to @ngrok_- its great to see the innovation in such tools which help developers",
     imageUrl: "img/cloudy_stuey.jpg",
   },
   {
-    username:"@Brodie_Friesen",
+    username: "@Brodie_Friesen",
     text: "@loophole_cloud and @SimpleMachines is an amazing combo for small self-hosted servers and development! I highly recommend both.",
     imageUrl: "img/Brodie_Friesen.jpg",
   },
   {
-    username:"@james_a_rob",
+    username: "@james_a_rob",
     text: "Integrated @loophole_cloud into a productivity tool i'm working on. Real simple to add custom domains for free.",
     imageUrl: "img/james_a_rob.jpg",
   },
   {
-    username:"@msanaullahsahar",
+    username: "@msanaullahsahar",
     text: "We really love this feature. Thanks for providing this wonderful service.",
     imageUrl: "img/msanaullahsahar.jpg",
   },
-  
-
 ];
-
-
 
 const features = [
   {
@@ -189,6 +182,30 @@ const Home = () => {
       <header className="hero">
         <div className="container">
           <div className="row">
+            <div className="col col--12">
+              <div className="alert alert--danger" role="alert">
+                <p>
+                  The revocation of certificates from Let's Encrypt can cause
+                  your Loophole site to not work as expected. The simplest
+                  workaround is to delete everything in the{" "}
+                  <code>~/.loophole/certs</code> folder and restart thr tunnel.
+                  Loophole will be able to fetch new certificate.
+                </p>
+                <p>
+                  Feel free to email us at{" "}
+                  <a href="mailto:loophole@main.dev">loophole@main.dev</a> or
+                  drop a PM on{" "}
+                  <a href="https://twitter.com/loophole_cloud">Twitter</a> if
+                  the issues still persist.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header className="hero">
+        <div className="container">
+          <div className="row">
             <div className="col col--6">
               <h2 className="hero__title">{siteConfig.tagline}</h2>
               <p className="hero__subtitle">
@@ -197,7 +214,9 @@ const Home = () => {
               <div className="spacer spacer--sm"></div>
               <div>
                 <Link
-                  className={clsx("button button--secondary button--lg text--uppercase")}
+                  className={clsx(
+                    "button button--secondary button--lg text--uppercase"
+                  )}
                   to={useBaseUrl("/download")}
                 >
                   Quickstart for free
@@ -215,7 +234,7 @@ const Home = () => {
         </div>
       </header>
       <main>
-      <div className="spacer--lg"></div>
+        <div className="spacer--lg"></div>
         {number && number.length > 0 && (
           <section>
             <div className="container">
@@ -224,7 +243,7 @@ const Home = () => {
               </div>
               <div className="row">
                 {number.map((props, idx) => (
-                 <Number key={idx} {...props} />
+                  <Number key={idx} {...props} />
                 ))}
               </div>
             </div>
