@@ -273,7 +273,7 @@ const Download = () => {
               Please download the latest version of Loophole for your Operating
               System and Architecture. 
               <br />
-              <Link to={useBaseUrl("/blog/Launching%20Youtube%20Tutorial%20Series")}>We have created a tutorial series on youtube to help with setting up your first tunnel.</Link>
+              <Link to={useBaseUrl("/blog/Launching%20GUI%20Tutorial")}>We have created a tutorial series on youtube to help with setting up your first tunnel.</Link>
               {loading || error || emptyDesktopAssets ? (
                 <div className="row">
                   <div className={clsx("col col--12", styles.downloadList)}>
