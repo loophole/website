@@ -1,7 +1,7 @@
 ---
 type: blog
-slug: Launching Youtube Tutorial Series
-title: Launching Youtube Tutorial Series
+slug: Launching GUI Tutorial
+title: Launching GUI Tutorial
 author: Aman Kalra
 author_title: Loophole Core Team
 author_url: https://github.com/amankalra172

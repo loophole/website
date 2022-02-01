@@ -93,3 +93,9 @@ The web url will be live till the time your local tunnel is running. It automati
 
 
 If you have any questions or want to share your experience with us, feel free to write to us at loophole@main.dev. To see more on Loophole, head to [documentation](/docs) .
+
+### Latest news from Loophole
+
+Your support will keep us motivated to keep building Loophole. If you want to request a special feature or wish to share your feedback about Loophole, feel free to fill out the [google form](https://forms.gle/TYXKnZ8USbuox1ub8) or email us at loophole@main.dev.
+
+Lastly, Loophole has pledged to never turn into a commerical business! To support our development, don't forget to [buy us a coffee or a cookie](https://www.buymeacoffee.com/loophole). We are also open for some beers. Cheers!

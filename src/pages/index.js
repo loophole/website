@@ -189,7 +189,7 @@ const Home = () => {
                   your Loophole site to not work as expected. The simplest
                   workaround is to delete everything in the{" "}
                   <code>~/.loophole/certs</code> folder and restart the tunnel.
-                  Loophole will be able to fetch new certificate.
+                  Loophole will be able to fetch new certificate!
                 </p>
                 <p>
                   Feel free to email us at{" "}

@@ -88,5 +88,8 @@ Your website is now **LIVE**!
 
 There are endless possibilities with Loophole. You can create a custom domain, or share a QR code than a URL. I would cover those features individually in other blog posts. For more details, you can refer to the [documentation](/docs) here. 
 
+### Latest news from Loophole
 
+Your support will keep us motivated to keep building Loophole. If you want to request a special feature or wish to share your feedback about Loophole, feel free to fill out the [google form](https://forms.gle/TYXKnZ8USbuox1ub8) or email us at loophole@main.dev.
 
+Lastly, Loophole has pledged to never turn into a commerical business! To support our development, don't forget to [buy us a coffee or a cookie](https://www.buymeacoffee.com/loophole). We are also open for some beers. Cheers!

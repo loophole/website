@@ -30,3 +30,9 @@ Loophole comes into play here. Loophole can be your next utility kit that create
 Loophole can take any HTTP service, on any network, particularly private ones, and expose it to the rest of the Internet. Developers that create applications want to share them, and with Loophole, they can enjoy lower costs, increased portability, and productivity.
 
 For technology enthusiasts that want to self-host their own services, their costs are reduced. The network configuration is simplified. Most importantly, their data is stored on their computers. 
+
+### Latest news from Loophole
+
+Your support will keep us motivated to keep building Loophole. If you want to request a special feature or wish to share your feedback about Loophole, feel free to fill out the [google form](https://forms.gle/TYXKnZ8USbuox1ub8) or email us at loophole@main.dev.
+
+Lastly, Loophole has pledged to never turn into a commerical business! To support our development, don't forget to [buy us a coffee or a cookie](https://www.buymeacoffee.com/loophole). We are also open for some beers. Cheers!
