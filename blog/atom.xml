@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://loophole.cloud/blog</id>
     <title>Loophole Blog</title>
-    <updated>2021-12-23T00:00:00.000Z</updated>
+    <updated>2022-01-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://loophole.cloud/blog"/>
     <subtitle>Loophole Blog</subtitle>
     <icon>https://loophole.cloud/img/icon.png</icon>
     <rights>Copyright © 2022 Main Development GmbH. All rights reserved.</rights>
+    <entry>
+        <title type="html"><![CDATA[Launching Youtube Tutorial Series]]></title>
+        <id>Launching Youtube Tutorial Series</id>
+        <link href="https://loophole.cloud/blog/Launching Youtube Tutorial Series"/>
+        <updated>2022-01-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Loophole aims to make web development easy to share. We launched a youtube hands-on series to help you run proxy tunnels in less than 5 minutes.]]></summary>
+        <content type="html"><![CDATA[<p>Loophole aims to make web development easy to share. We launched a youtube hands-on series to help you run proxy tunnels in less than 5 minutes. </p><p>Loophole was initially created as a hobby project during our Friday office happy hours before it was launched for the public. Today it has both CLI and GUI-based interfaces with over <strong>15000 tunnels</strong> launched by <strong>700 users</strong>  from over <strong>91 countries</strong> in the world. These numbers set a foundation for our product and its use case. It not only uplifts every team member’s confidence that has worked numerous hours in building Loophole but also makes us realize the true potential of Loophole in a developer’s toolkit. </p><p>Before using Loophole, you need to authenticate yourself. The below video takes you through the process of authentication. Loophole lets you run local tunnels, share files via the HTTP protocol, or even tunnel your WebDAV! </p><p>To get started, watch the videos and keep tunneling. We would appreciate it if you <strong>like, share and subscribe</strong> on <a href="https://www.youtube.com/watch?v=zN5KI6gBIwQ&amp;list=PLWtOed1Q0yc9hXyfsxi6ytdtaQnzVZBQp" target="_blank" rel="noopener noreferrer">Youtube</a>! </p><iframe width="650" height="350" src="https://www.youtube-nocookie.com/embed/VyQCnGqefao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><h3 class="anchor anchorWithStickyNavbar_mojV" id="running-your-first-tunnel">Running your first tunnel<a class="hash-link" href="#running-your-first-tunnel" title="Direct link to heading">​</a></h3><p>Once you login to Loophole, you have access to a wide variety of features! To run our tunnel, all we have to do is let Loophole know the port our local server is running on. Trust me, it is that simple. This video will prove it to you.</p><iframe width="650" height="350" src="https://www.youtube-nocookie.com/embed/bXL946uOkjo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><h3 class="anchor anchorWithStickyNavbar_mojV" id="sharing-your-file-via-loophole">Sharing your file via Loophole<a class="hash-link" href="#sharing-your-file-via-loophole" title="Direct link to heading">​</a></h3><p>Save time by transferring files (big and small) to your friend by using Loophole. You do not need to encrypt your files before the transfer because they are being tunneled through a very secure SSH protocol. Learn how to share your files using Loophole GUI below.</p><iframe width="650" height="350" src="https://www.youtube-nocookie.com/embed/ahmDRzOZY8o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><h3 class="anchor anchorWithStickyNavbar_mojV" id="webdav-via-loophole">WebDAV via Loophole<a class="hash-link" href="#webdav-via-loophole" title="Direct link to heading">​</a></h3><p>Exposing your local directory to the public has never been an easy process. We at Loophole, found this is an interesting feature to have. Now you can share your local directory with just three clicks. This can then be even mounted on other machines like Windows Explorer, macOS Finder, Linux Gnome Files, or Linux KDE Konqueror!</p><iframe width="650" height="350" src="https://www.youtube-nocookie.com/embed/zN5KI6gBIwQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><p>Your support will keep us motivated to keep building Loophole. If you want to request a special feature or wish to share your feedback about Loophole, feel free to fill out the <a href="https://forms.gle/TYXKnZ8USbuox1ub8" target="_blank" rel="noopener noreferrer">google form</a> or email us at <a href="mailto:loophole@main.dev" target="_blank" rel="noopener noreferrer">loophole@main.dev</a>.</p><p>Lastly, Loophole has pledged to never turn into a commerical business! To support our development, don't forget to <a href="https://www.buymeacoffee.com/loophole" target="_blank" rel="noopener noreferrer">buy us a coffee or a cookie</a>. We are also open for some beers. Cheers!</p>]]></content>
+        <author>
+            <name>Aman Kalra</name>
+            <uri>https://github.com/amankalra172</uri>
+        </author>
+        <category label="tunnel" term="tunnel"/>
+        <category label="youtube" term="youtube"/>
+        <category label="freeforever" term="freeforever"/>
+        <category label="tutorial" term="tutorial"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Next Big Thing!]]></title>
         <id>the-next-big-thing</id>
