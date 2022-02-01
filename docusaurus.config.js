@@ -76,6 +76,10 @@ module.exports = {
               href: "https://github.com/loophole/cli/discussions",
             },
             {
+              label: "Youtube",
+              href: "https://www.youtube.com/watch?v=zN5KI6gBIwQ&list=PLWtOed1Q0yc9hXyfsxi6ytdtaQnzVZBQp",
+            },
+            {
               label: "Twitter",
               href: "https://twitter.com/loophole_cloud",
             },
