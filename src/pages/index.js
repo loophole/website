@@ -179,21 +179,24 @@ const Home = () => {
   const { siteConfig = {} } = context;
   return (
     <Layout title="Home" description={siteConfig.tagline}>
-    <header className="hero">
+      <header className="hero">
         <div className="container">
           <div className="row">
             <div className="col col--12">
-              <div className="alert alert--danger" role="alert">
+              <div className="alert alert--success" role="alert">
                 <p>
-                  We are currently facing issues with api.loophole.cloud certificate. Working on a fix. Please stay patient.
+                  We were facing issues with `api.loophole.cloud` certificate. The issue should be resolved now.
+                </p>
+                <p>
+                  Feel free to email us at{" "}
+                  <a href="mailto:loophole@main.dev">loophole@main.dev</a> or
+                  drop a PM on{" "}
+                  <a href="https://twitter.com/loophole_cloud">Twitter</a> if
+                  the issues still persist.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </header>
-      <header className="hero">
-        <div className="container">
           <div className="row">
             <div className="col col--12">
               <div className="alert alert--danger" role="alert">
