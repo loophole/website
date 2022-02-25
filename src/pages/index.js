@@ -179,46 +179,30 @@ const Home = () => {
   const { siteConfig = {} } = context;
   return (
     <Layout title="Home" description={siteConfig.tagline}>
-      <header className="hero">
-        <div className="container">
-          <div className="row">
-            <div className="col col--12">
-              <div className="alert alert--success" role="alert">
-                <p>
-                  We were facing issues with `api.loophole.cloud` certificate. The issue should be resolved now.
-                </p>
-                <p>
-                  Feel free to email us at{" "}
-                  <a href="mailto:loophole@main.dev">loophole@main.dev</a> or
-                  drop a PM on{" "}
-                  <a href="https://twitter.com/loophole_cloud">Twitter</a> if
-                  the issues still persist.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col--12">
-              <div className="alert alert--danger" role="alert">
-                <p>
-                  The revocation of certificates from Let's Encrypt can cause
-                  your Loophole site to not work as expected. The simplest
-                  workaround is to delete everything in the{" "}
-                  <code>~/.loophole/certs</code> folder and restart the tunnel.
-                  Loophole will be able to fetch new certificate!
-                </p>
-                <p>
-                  Feel free to email us at{" "}
-                  <a href="mailto:loophole@main.dev">loophole@main.dev</a> or
-                  drop a PM on{" "}
-                  <a href="https://twitter.com/loophole_cloud">Twitter</a> if
-                  the issues still persist.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+//       <header className="hero">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col col--12">
+//               <div className="alert alert--success" role="alert">
+//                 <p>
+//                 </p>
+//                 <p>
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="row">
+//             <div className="col col--12">
+//               <div className="alert alert--danger" role="alert">
+//                 <p>
+//                 </p>
+//                 <p>
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </header>
       <header className="hero">
         <div className="container">
           <div className="row">
