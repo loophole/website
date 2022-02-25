@@ -179,6 +179,19 @@ const Home = () => {
   const { siteConfig = {} } = context;
   return (
     <Layout title="Home" description={siteConfig.tagline}>
+    <header className="hero">
+        <div className="container">
+          <div className="row">
+            <div className="col col--12">
+              <div className="alert alert--danger" role="alert">
+                <p>
+                  We are currently facing issues with api.loophole.cloud certificate. Working on a fix. Please stay patient.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       <header className="hero">
         <div className="container">
           <div className="row">
