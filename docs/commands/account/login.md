@@ -12,7 +12,7 @@ in case you don't yet have it.
 
 Running this command as not logged in user will prompt you to open URL and use the browser to verify your identity.
 
-Running this command as logged in user will fail, in cae you want to relogin then you need to log out first
+Running this command as logged in user will fail, in case you want to relogin then you need to log out first
 
 ## Usage
 
