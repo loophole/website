@@ -183,9 +183,9 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col col--12">
-              <div className="alert alert--danger" role="alert">
+              <div className="alert alert--success" role="alert">
                 <p>
-                  We are currently facing issues with api.loophole.cloud availability. Working on a fix. Please stay patient.
+                  We were facing issues with api.loophole.cloud availability. All services are up and running again. Sorry for the inconvenience caused.
                 </p>
               </div>
             </div>
