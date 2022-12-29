@@ -179,30 +179,19 @@ const Home = () => {
   const { siteConfig = {} } = context;
   return (
     <Layout title="Home" description={siteConfig.tagline}>
-    {/*<header className="hero">
+    <header className="hero">
         <div className="container">
-          <div className="row">
-            <div className="col col--12">
-              <div className="alert alert--success" role="alert">
-                <p>
-                </p>
-                <p>
-                </p>
-              </div>
-            </div>
-          </div>
           <div className="row">
             <div className="col col--12">
               <div className="alert alert--danger" role="alert">
                 <p>
-                </p>
-                <p>
+                  We are currently facing issues with api.loophole.cloud availability. Working on a fix. Please stay patient.
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </header>*/}
+      </header>
       <header className="hero">
         <div className="container">
           <div className="row">
