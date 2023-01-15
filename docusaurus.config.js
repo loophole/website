@@ -89,19 +89,19 @@ module.exports = {
             },
           ],
         },
-        {
-          title: "Sponsor Us!",
-          items: [
-            {
-              label: "Why Donate?",
-              href: "/blog/the-next-big-thing",
-            },
-            {
-              label: "Buy me a Coffee",
-              href: "https://www.buymeacoffee.com/loophole",
-            },
-          ],
-        },
+//         {
+//           title: "Sponsor Us!",
+//           items: [
+//             {
+//               label: "Why Donate?",
+//               href: "/blog/the-next-big-thing",
+//             },
+//             {
+//               label: "Buy me a Coffee",
+//               href: "https://www.buymeacoffee.com/loophole",
+//             },
+//           ],
+//         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Main Development GmbH. All rights reserved.`,
     },
