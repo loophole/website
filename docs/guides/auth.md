@@ -5,7 +5,7 @@ title: Authentication
 
 To access Loophole services described in further sections, you need to sign up for an account. Once you've signed up, you need to configure loophole with the authtoken. This will grant you access to account-only features. Loophole has a simple 'account' command to make this easy. Under the hood, the login command does is to add (or modify) the authtoken property in your loophole configuration file.
 
-**Under beta testing, all the features are available to every user at no cost.**
+**All the features are available to every user at no cost.**
 
 ## account
 
