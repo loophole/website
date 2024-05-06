@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkloophole_website=self.webpackChunkloophole_website||[]).push([[3645],{2366:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/freeforever","name":"freeforever","count":2,"permalink":"/blog/tags/freeforever"}')}}]);

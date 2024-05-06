@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkloophole_website=self.webpackChunkloophole_website||[]).push([[4331],{5382:function(o){o.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/donation","name":"donation","count":1,"permalink":"/blog/tags/donation"}')}}]);

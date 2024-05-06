@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkloophole_website=self.webpackChunkloophole_website||[]).push([[2306],{694:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/desktop","name":"desktop","count":1,"permalink":"/blog/tags/desktop"}')}}]);
